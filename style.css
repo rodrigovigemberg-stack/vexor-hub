@@ -587,98 +587,140 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ════════════════════════════════════════════════════
-   02 — CLIENTES (⚫ PRETO) — Faixa Circular Contínua
+   02 — EMPRESAS QUE CONFIAM (⚫ FUNDO ESCURO)
+   Faixa Contínua de Logos • Monocromática Branca
    ════════════════════════════════════════════════════ */
-.clients-marquee {
-  position: relative; overflow: hidden;
-  padding: clamp(64px, 7.5vw, 100px) 0 clamp(68px, 8vw, 108px);
-  background: #000000;
-  border-top: 1px solid var(--border-dark);
-  border-bottom: 1px solid var(--border-dark);
+.clients-strip {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(38px, 4.5vw, 56px) 0;
+  background: #09090b;
+  border-top: 1px solid #18181b;
+  border-bottom: 1px solid #18181b;
 }
-.clients-heading {
-  width: min(1180px, calc(100% - 40px));
-  margin: 0 auto clamp(36px, 4.5vw, 56px);
+
+.clients-strip__container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto clamp(20px, 2.6vw, 30px);
   text-align: center;
 }
-.clients-heading .section-label {
-  display: block; font-size: 11.5px; font-weight: 700;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--brand-dark-green); margin-bottom: 12px;
-}
-.clients-heading h2 {
+
+.clients-strip__title {
   font-family: var(--font-heading);
-  font-size: clamp(1.85rem, 3.4vw, 3rem);
-  font-weight: 800; line-height: 1.15;
-  letter-spacing: -0.04em; color: var(--text-dark-title);
-  max-width: 720px; margin: 0 auto 14px;
+  font-size: clamp(0.76rem, 0.95vw, 0.86rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #71717a;
+  margin: 0;
 }
-.clients-heading p {
-  font-size: clamp(0.98rem, 1.25vw, 1.12rem);
-  color: var(--text-dark-body); line-height: 1.65;
-  max-width: 620px; margin: 0 auto;
-}
+
 .marquee-viewport {
-  width: 100%; overflow: hidden;
-  padding: 14px 0;
-  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 8px 0;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
+
 .marquee-track {
-  display: flex; align-items: center;
+  display: flex;
+  align-items: center;
   width: max-content;
-  animation: clients-marquee 30s linear infinite;
+  animation: marquee-scroll 34s linear infinite;
   will-change: transform;
 }
-.marquee-track:hover,
-.marquee-viewport:hover .marquee-track {
-  animation-play-state: paused;
-}
+
 .marquee-group {
-  display: flex; align-items: center;
-  gap: clamp(24px, 2.8vw, 44px);
-  padding-right: clamp(24px, 2.8vw, 44px);
+  display: flex;
+  align-items: center;
+  gap: clamp(48px, 5.5vw, 76px);
+  padding-right: clamp(48px, 5.5vw, 76px);
+  flex-shrink: 0;
 }
-.client-circle-card {
-  flex: 0 0 auto;
-  /* Desktop: exibe cerca de 5 a 6 logos por vez com espaçamento generoso */
-  width: clamp(140px, 11vw, 168px);
-  height: clamp(140px, 11vw, 168px);
-  border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
-  display: flex; align-items: center; justify-content: center;
-  padding: clamp(20px, 1.8vw, 28px);
-  transition: transform 260ms ease, box-shadow 260ms ease;
-  cursor: default;
-  user-select: none;
+
+.client-brand-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: clamp(32px, 3.8vw, 42px);
+  transition: transform 0.25s ease;
 }
-.client-circle-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-.client-circle-card img {
+
+.client-brand-logo {
   display: block;
-  width: 100%; height: 100%;
-  max-width: 100%; max-height: 100%;
-  object-fit: contain; object-position: center;
+  max-height: 100%;
+  width: auto;
+  max-width: clamp(100px, 11vw, 140px);
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.72;
+  transition: opacity 0.25s ease;
+  user-select: none;
+  pointer-events: none;
 }
-@keyframes clients-marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+
+.client-brand-wrap:hover .client-brand-logo {
+  opacity: 1;
 }
-@media (max-width: 720px) {
-  .clients-marquee { padding: 48px 0 56px; }
-  .marquee-group { gap: 14px; padding-right: 14px; }
-  /* Celular: exibe cerca de 3 logos por vez */
-  .client-circle-card {
-    width: 98px;
-    height: 98px;
-    padding: 14px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
   }
-  .marquee-track { animation-duration: 22s; }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Acessibilidade: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px 48px;
+    width: 100%;
+  }
+  .marquee-group:last-child {
+    display: none;
+  }
+  .marquee-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+
+/* Versão Mobile */
+@media (max-width: 720px) {
+  .clients-strip {
+    padding: 28px 0 32px;
+  }
+  .clients-strip__container {
+    margin-bottom: 18px;
+  }
+  .clients-strip__title {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+  .marquee-group {
+    gap: 36px;
+    padding-right: 36px;
+  }
+  .client-brand-wrap {
+    height: 26px;
+  }
+  .client-brand-logo {
+    max-width: 88px;
+    opacity: 0.75;
+  }
+  .marquee-track {
+    animation-duration: 24s;
+  }
 }
 
 /* ════════════════════════════════════════════════════
