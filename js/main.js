@@ -1,7 +1,8 @@
 /**
  * VEXOR HUB — main.js
- * Navbar, FAQ, Tabs, Reveal, Carrossel, Mobile Menu
- * Sem cursor personalizado, sem Three.js, sem GSAP pesado.
+ * Navbar, FAQ, Tabs de Soluções (4 grupos), Circuito Método Vexor,
+ * Modal Lightbox de Prints, Reveal, Mobile Menu
+ * 100% em Português do Brasil, sem dependências externas.
  */
 
 (function () {
@@ -21,7 +22,7 @@
       header.classList.toggle('scrolled', window.scrollY > 30);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // estado inicial
+    onScroll();
 
     // Mobile menu toggle
     if (toggle && mobileMenu) {
@@ -41,7 +42,7 @@
         }
       });
 
-      // Fecha ao clicar em link
+      // Fecha ao clicar em qualquer link
       mobileMenu.querySelectorAll('.mobile-nav-link, .mobile-cta').forEach(link => {
         link.addEventListener('click', () => {
           mobileMenu.hidden = true;
@@ -67,21 +68,14 @@
 
   /* ─────────────────────────────────────────
      3. SCROLL REVEAL — IntersectionObserver
-     REGRA: conteúdo NUNCA fica invisível se o
-     observer falhar (CSS já define opacity: 0,
-     JS adiciona "is-visible")
      ───────────────────────────────────────── */
   function initReveal() {
-    // Se prefers-reduced-motion, marcar tudo como visível imediatamente
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.querySelectorAll('.reveal').forEach(el => {
-        el.classList.add('is-visible');
-      });
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
       return;
     }
 
     if (!('IntersectionObserver' in window)) {
-      // Fallback: mostra tudo
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
       return;
     }
@@ -89,11 +83,10 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Stagger para elementos irmãos no grid
           const el = entry.target;
           const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal'));
           const idx = siblings.indexOf(el);
-          const delay = Math.min(idx * 80, 400); // máx 400ms de delay
+          const delay = Math.min(idx * 80, 400);
           el.style.transitionDelay = delay + 'ms';
           el.classList.add('is-visible');
           observer.unobserve(el);
@@ -105,7 +98,7 @@
   }
 
   /* ─────────────────────────────────────────
-     4. TABS DE SOLUÇÕES
+     4. TABS DE SOLUÇÕES (4 GRUPOS)
      ───────────────────────────────────────── */
   function initSolutionsTabs() {
     const tabsContainer = document.getElementById('solutions-tabs');
@@ -137,28 +130,111 @@
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => showTab(tab));
-      // Acessibilidade: setas do teclado
       tab.addEventListener('keydown', e => {
         const tabList = Array.from(tabs);
         const idx = tabList.indexOf(tab);
         if (e.key === 'ArrowRight') {
           e.preventDefault();
-          tabList[(idx + 1) % tabList.length].focus();
-          showTab(tabList[(idx + 1) % tabList.length]);
+          const next = tabList[(idx + 1) % tabList.length];
+          next.focus();
+          showTab(next);
         } else if (e.key === 'ArrowLeft') {
           e.preventDefault();
-          tabList[(idx - 1 + tabList.length) % tabList.length].focus();
-          showTab(tabList[(idx - 1 + tabList.length) % tabList.length]);
+          const prev = tabList[(idx - 1 + tabList.length) % tabList.length];
+          prev.focus();
+          showTab(prev);
         }
       });
     });
 
-    // Inicializa: primeira tab ativa
     if (tabs.length) showTab(tabs[0]);
   }
 
   /* ─────────────────────────────────────────
-     5. FAQ ACCORDION
+     5. CIRCUITO MÉTODO VEXOR — Interatividade
+     ───────────────────────────────────────── */
+  function initCircuitInteractive() {
+    const nodes = document.querySelectorAll('.circuit-node');
+    const cards = document.querySelectorAll('.method-step-card');
+    if (!nodes.length || !cards.length) return;
+
+    function selectStep(stepIndex) {
+      nodes.forEach(n => {
+        const isSelected = n.getAttribute('data-step') === String(stepIndex);
+        n.classList.toggle('circuit-node--active', isSelected);
+        n.setAttribute('aria-selected', String(isSelected));
+      });
+
+      cards.forEach(c => {
+        const isSelected = c.getAttribute('data-step') === String(stepIndex);
+        c.classList.toggle('method-step-card--active', isSelected);
+        if (isSelected) {
+          c.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+      });
+    }
+
+    nodes.forEach(node => {
+      node.addEventListener('click', () => {
+        const step = node.getAttribute('data-step');
+        if (step !== null) selectStep(Number(step));
+      });
+    });
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const step = card.getAttribute('data-step');
+        if (step !== null) selectStep(Number(step));
+      });
+    });
+  }
+
+  /* ─────────────────────────────────────────
+     6. MODAL LIGHTBOX PARA PRINTS
+     ───────────────────────────────────────── */
+  function initPrintModal() {
+    const modal = document.getElementById('print-modal');
+    const modalImg = document.getElementById('print-modal-img');
+    const modalCaption = document.getElementById('print-modal-caption');
+    const modalClose = document.getElementById('print-modal-close');
+    const modalBackdrop = document.getElementById('print-modal-backdrop');
+    const printCards = document.querySelectorAll('.zoomable-print');
+
+    if (!modal || !modalImg) return;
+
+    function openModal(src, caption) {
+      modalImg.src = src;
+      modalCaption.textContent = caption || '';
+      modal.hidden = false;
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      modal.setAttribute('aria-hidden', 'true');
+      modalImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    printCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const src = card.getAttribute('data-image');
+        const caption = card.getAttribute('data-caption');
+        if (src) openModal(src, caption);
+      });
+    });
+
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+  }
+
+  /* ─────────────────────────────────────────
+     7. FAQ ACCORDION (7 ITENS)
      ───────────────────────────────────────── */
   function initFaq() {
     const items = document.querySelectorAll('.faq-item');
@@ -178,7 +254,7 @@
           if (t) t.setAttribute('aria-expanded', 'false');
         });
 
-        // Abre o clicado (se estava fechado)
+        // Abre o clicado se estava fechado
         if (!isOpen) {
           item.classList.add('is-open');
           trigger.setAttribute('aria-expanded', 'true');
@@ -188,7 +264,7 @@
   }
 
   /* ─────────────────────────────────────────
-     6. SCROLL SUAVE — links âncora
+     8. SCROLL SUAVE — LINKS ÂNCORA
      ───────────────────────────────────────── */
   function initSmoothScroll() {
     const HEADER_HEIGHT = 72;
@@ -206,24 +282,12 @@
   }
 
   /* ─────────────────────────────────────────
-     7. BACK TO TOP
+     9. BACK TO TOP
      ───────────────────────────────────────── */
   function initBackToTop() {
     const btn = document.getElementById('back-to-top');
     if (!btn) return;
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  }
-
-  /* ─────────────────────────────────────────
-     8. CARROSSEL DE TECNOLOGIA
-     ───────────────────────────────────────── */
-  function initTechCarousel() {
-    const inner = document.getElementById('tech-carousel-inner');
-    if (!inner) return;
-
-    // Pausa no hover via JS (reforço além do CSS)
-    inner.addEventListener('mouseenter', () => inner.style.animationPlayState = 'paused');
-    inner.addEventListener('mouseleave', () => inner.style.animationPlayState = 'running');
   }
 
   /* ─────────────────────────────────────────
@@ -234,10 +298,11 @@
     initScrollProgress();
     initReveal();
     initSolutionsTabs();
+    initCircuitInteractive();
+    initPrintModal();
     initFaq();
     initSmoothScroll();
     initBackToTop();
-    initTechCarousel();
   }
 
   if (document.readyState === 'loading') {
