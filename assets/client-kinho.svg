@@ -1,0 +1,28 @@
+<!-- Kinho Automóveis SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <!-- Car silhouette in red and yellow -->
+  <g transform="translate(40, 20)">
+    <!-- Red base swoop -->
+    <path d="M 20 130 C 60 90, 140 70, 210 75 C 290 80, 360 110, 410 135 C 340 105, 270 95, 200 95 C 130 95, 60 115, 20 130 Z" fill="#d9241b"/>
+    <!-- Yellow dynamic car roof -->
+    <path d="M 120 100 C 170 40, 240 25, 310 40 C 370 55, 410 85, 430 110 C 380 75, 330 60, 270 55 C 200 50, 150 70, 120 100 Z" fill="#fec200"/>
+    <path d="M 30 115 C 70 85, 130 75, 190 80 C 140 85, 90 98, 30 115 Z" fill="#fec200"/>
+  </g>
+  
+  <!-- KINHO Text with stroke and vibrant yellow -->
+  <g transform="translate(250, 230)">
+    <!-- Shadow / outline layer -->
+    <text x="0" y="0" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="86" font-weight="900" font-style="italic" fill="#000000" stroke="#d9241b" stroke-width="14" stroke-linejoin="round" text-anchor="middle" letter-spacing="3">
+      KINHO
+    </text>
+    <!-- Yellow main fill -->
+    <text x="0" y="0" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="86" font-weight="900" font-style="italic" fill="#fed000" text-anchor="middle" letter-spacing="3">
+      KINHO
+    </text>
+  </g>
+  
+  <!-- AUTOMÓVEIS in black italic bold -->
+  <text x="250" y="295" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="34" font-weight="900" font-style="italic" fill="#111111" text-anchor="middle" letter-spacing="4">
+    AUTOMÓVEIS
+  </text>
+</svg>

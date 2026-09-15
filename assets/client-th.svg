@@ -1,0 +1,22 @@
+<!-- TH Multimarcas SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <!-- Sleek sports car silhouette -->
+  <g transform="translate(60, 40)">
+    <!-- Car top swoop -->
+    <path d="M 40 105 C 100 65, 170 30, 245 30 C 310 30, 360 55, 400 90 C 340 70, 280 60, 220 62 C 140 65, 80 90, 40 105 Z" fill="#1e2229"/>
+    <!-- Car lower accent -->
+    <path d="M 0 75 C 60 45, 140 25, 220 25 C 290 25, 340 40, 370 60 C 330 45, 270 38, 200 40 C 120 42, 50 65, 0 75 Z" fill="#1e2229"/>
+    <!-- Wheel arch -->
+    <path d="M 290 105 C 300 70, 345 70, 360 105" stroke="#1e2229" stroke-width="12" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- TH Letters -->
+  <text x="250" y="235" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="78" font-weight="900" fill="#df1f26" text-anchor="middle" letter-spacing="4">
+    TH
+  </text>
+  
+  <!-- MULTIMARCAS -->
+  <text x="250" y="300" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="38" font-weight="900" fill="#df1f26" text-anchor="middle" letter-spacing="6">
+    MULTIMARCAS
+  </text>
+</svg>

@@ -1,0 +1,22 @@
+<!-- Green Garden Empreendimentos SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <!-- Interlocking geometric GG emblem -->
+  <g transform="translate(165, 10)">
+    <!-- Outer G / Box -->
+    <path d="M 0 0 L 170 0 L 170 170 L 0 170 Z M 22 22 L 22 148 L 148 148 L 148 22 Z" fill="#b99343"/>
+    <!-- Inner G -->
+    <path d="M 46 46 L 124 46 L 124 124 L 46 124 Z M 66 66 L 66 104 L 104 104 L 104 86 L 86 86 L 86 78 L 118 78 L 118 118 L 52 118 L 52 52 L 118 52 L 118 66 Z" fill="#b99343"/>
+    <!-- Center bar -->
+    <rect x="90" y="76" width="48" height="18" fill="#b99343"/>
+  </g>
+  
+  <!-- Green Garden Text -->
+  <text x="250" y="260" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="52" font-weight="700" fill="#b99343" text-anchor="middle" letter-spacing="1">
+    Green Garden
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="250" y="305" font-family="'Inter', 'Montserrat', sans-serif" font-size="16" font-weight="700" fill="#14432a" text-anchor="middle" letter-spacing="3.5">
+    EMPREENDIMENTOS IMOBILIÁRIOS
+  </text>
+</svg>

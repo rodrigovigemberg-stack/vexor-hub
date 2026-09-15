@@ -1,0 +1,23 @@
+<!-- Éden Car Multimarcas SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <!-- Car flowing line -->
+  <g transform="translate(60, 40)">
+    <path d="M 0 110 C 60 70, 110 30, 200 30 C 270 30, 340 70, 390 115 C 330 75, 270 50, 190 52 C 120 54, 60 85, 0 110 Z" fill="#18181b"/>
+    <path d="M 110 90 C 145 60, 195 50, 240 60 C 210 58, 170 65, 140 85 Z" fill="#18181b"/>
+  </g>
+  
+  <!-- Éden Car Text -->
+  <g transform="translate(250, 230)">
+    <text x="-16" y="0" font-family="'Inter', 'Arial', sans-serif" font-size="64" font-weight="900" fill="#dc2626" text-anchor="end" letter-spacing="1">
+      Éden
+    </text>
+    <text x="5" y="0" font-family="'Inter', 'Arial', sans-serif" font-size="64" font-weight="900" fill="#18181b" text-anchor="start" letter-spacing="1">
+      Car
+    </text>
+  </g>
+  
+  <!-- Multimarcas -->
+  <text x="250" y="285" font-family="'Inter', 'Arial', sans-serif" font-size="28" font-weight="700" font-style="italic" fill="#27272a" text-anchor="middle" letter-spacing="2.5">
+    Multimarcas
+  </text>
+</svg>

@@ -1,0 +1,25 @@
+<!-- HAEDD Construtora e Incorporadora SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <!-- Icon H -->
+  <g transform="translate(175, 20)">
+    <!-- Rounded background container for H if desired, or pure geometric H -->
+    <path d="M 20 0 L 50 0 L 130 80 L 130 130 L 100 130 L 20 50 Z" fill="#0c3577"/>
+    <path d="M 20 80 L 70 130 L 20 130 Z" fill="#0c3577"/>
+    <path d="M 80 0 L 130 0 L 130 50 Z" fill="#0c3577"/>
+    <rect x="20" y="20" width="30" height="110" rx="4" fill="#0c3577"/>
+    <rect x="100" y="20" width="30" height="110" rx="4" fill="#0c3577"/>
+    <rect x="45" y="62" width="60" height="26" fill="#0c3577"/>
+  </g>
+  
+  <!-- HAEDD Text -->
+  <text x="250" y="260" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', serif" font-size="76" font-weight="900" fill="#0c3577" text-anchor="middle" letter-spacing="4">
+    HAEDD
+  </text>
+  <!-- Gold triangle in A -->
+  <polygon points="172,216 160,240 184,240" fill="#c59f51"/>
+  
+  <!-- Subtitle -->
+  <text x="250" y="310" font-family="'Inter', 'Montserrat', sans-serif" font-size="21" font-weight="500" fill="#a07d38" text-anchor="middle" letter-spacing="1.5">
+    Construtora e Incorporadora
+  </text>
+</svg>
