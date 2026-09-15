@@ -37,7 +37,7 @@
 
       <ul class="desktop-navigation" role="list">
         <li><a href="#solucoes" class="nav-link">Soluções</a></li>
-        <li><a href="#metodo" class="nav-link">Como trabalhamos</a></li>
+        <li><a href="#metodo" class="nav-link">Método Vexor</a></li>
         <li><a href="#clientes" class="nav-link">Clientes</a></li>
         <li><a href="#sobre" class="nav-link">Sobre</a></li>
         <li><a href="#faq" class="nav-link">Dúvidas</a></li>
@@ -61,7 +61,7 @@
     <div class="mobile-menu" id="mobile-menu" hidden>
       <ul role="list">
         <li><a href="#solucoes" class="mobile-nav-link">Soluções</a></li>
-        <li><a href="#metodo" class="mobile-nav-link">Como trabalhamos</a></li>
+        <li><a href="#metodo" class="mobile-nav-link">Método Vexor</a></li>
         <li><a href="#clientes" class="mobile-nav-link">Clientes</a></li>
         <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
         <li><a href="#faq" class="mobile-nav-link">Dúvidas</a></li>
@@ -451,47 +451,138 @@
       </div>
     </section>
 
-    <!-- ═══════════════ 05 — COMO TRABALHAMOS ═══════════════ -->
-    <section id="metodo" class="method-section">
+    <!-- ═══════════════ 05 — MÉTODO VEXOR ═══════════════ -->
+    <section id="metodo" class="method-section" aria-label="Método Vexor">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow section-eyebrow--light">Como trabalhamos</span>
-          <h2 class="section-title">
-            Um processo pensado para gerar resultados consistentes.
-          </h2>
+        
+        <!-- Cabeçalho da Seção -->
+        <div class="method-header reveal">
+          <h2 class="method-title">Método Vexor</h2>
+          <p class="method-keyphrase">
+            Não otimizamos campanhas apenas com base em cliques e leads. Otimizamos com base no que acontece depois deles.
+          </p>
         </div>
 
-        <div class="method-steps" role="list">
-          <div class="method-step reveal" role="listitem">
-            <div class="step-number" aria-hidden="true">01</div>
-            <h3 class="step-title">Diagnóstico</h3>
-            <p class="step-desc">Entendemos o negócio, o público, a operação atual e os principais gargalos.</p>
+        <!-- Palco do Circuito Fechado -->
+        <div class="vexor-circuit-stage reveal">
+
+          <!-- Circuito Gráfico SVG Responsivo -->
+          <svg class="circuit-svg" viewBox="0 0 840 480" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <!-- Seta do traço de retorno verde -->
+              <marker id="arrow-return" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a" />
+              </marker>
+              <!-- Seta do fluxo regular cinza -->
+              <marker id="arrow-forward" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#cbd5e1" />
+              </marker>
+            </defs>
+
+            <!-- Trilha Base do Circuito (1 até 6: fluxo comercial) -->
+            <path d="M 335 65 A 330 160 0 0 1 750 220 A 330 160 0 0 1 91 234" class="circuit-track circuit-track--forward" />
+
+            <!-- Trilha de Retorno Inteligente em Verde Vexor (6 Inteligência ➔ 7 Otimização ➔ 1 Estratégia) -->
+            <path d="M 91 234 A 330 160 0 0 1 335 65" class="circuit-track circuit-track--return" marker-end="url(#arrow-return)" />
+
+            <!-- Indicador Editorial do Loop de Retorno no Circuito -->
+            <g class="circuit-return-badge-group" transform="translate(62, 132)">
+              <rect x="0" y="0" width="166" height="26" rx="13" fill="#f0fdf4" stroke="rgba(22, 163, 74, 0.35)" stroke-width="1.2" />
+              <text x="83" y="16.5" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#16a34a" text-anchor="middle" letter-spacing="0.08em">
+                ↺ LOOP DE RETORNO
+              </text>
+            </g>
+          </svg>
+
+          <!-- Núcleo Central: VENDA -->
+          <div class="circuit-core-hub" aria-label="Núcleo orientador: Venda">
+            <span class="circuit-core-tag">FOCO CENTRAL</span>
+            <span class="circuit-core-title">VENDA</span>
+            <span class="circuit-core-desc">Resultado que orienta</span>
           </div>
-          <div class="method-connector" aria-hidden="true"></div>
-          <div class="method-step reveal" role="listitem">
-            <div class="step-number" aria-hidden="true">02</div>
-            <h3 class="step-title">Planejamento</h3>
-            <p class="step-desc">Definimos prioridades, canais, comunicação e indicadores que serão acompanhados.</p>
-          </div>
-          <div class="method-connector" aria-hidden="true"></div>
-          <div class="method-step reveal" role="listitem">
-            <div class="step-number" aria-hidden="true">03</div>
-            <h3 class="step-title">Implementação</h3>
-            <p class="step-desc">Colocamos campanhas, conteúdo, páginas e integrações necessárias em funcionamento.</p>
-          </div>
-          <div class="method-connector" aria-hidden="true"></div>
-          <div class="method-step reveal" role="listitem">
-            <div class="step-number" aria-hidden="true">04</div>
-            <h3 class="step-title">Acompanhamento</h3>
-            <p class="step-desc">Analisamos os resultados e o que acontece com cada oportunidade gerada.</p>
-          </div>
-          <div class="method-connector" aria-hidden="true"></div>
-          <div class="method-step reveal" role="listitem">
-            <div class="step-number" aria-hidden="true">05</div>
-            <h3 class="step-title">Otimização</h3>
-            <p class="step-desc">Usamos os dados para ajustar campanhas, comunicação e processo comercial continuamente.</p>
+
+          <!-- Os 7 Nós do Circuito Dispostos ao Redor -->
+          <div class="circuit-nodes-layer" role="tablist" aria-label="Etapas do Método Vexor">
+            
+            <!-- Etapa 1 -->
+            <button type="button" class="circuit-node circuit-node--active" data-step="0" id="circuit-node-0" role="tab" aria-selected="true" aria-controls="circuit-detail-panel" tabindex="0" style="left: 40%; top: 13.5%;">
+              <span class="circuit-node__num">01</span>
+              <span class="circuit-node__name">Mercado & Estratégia</span>
+            </button>
+
+            <!-- Etapa 2 -->
+            <button type="button" class="circuit-node" data-step="1" id="circuit-node-1" role="tab" aria-selected="false" aria-controls="circuit-detail-panel" tabindex="-1" style="left: 75.2%; top: 20.2%;">
+              <span class="circuit-node__num">02</span>
+              <span class="circuit-node__name">Oferta & Criativos</span>
+            </button>
+
+            <!-- Etapa 3 -->
+            <button type="button" class="circuit-node" data-step="2" id="circuit-node-2" role="tab" aria-selected="false" aria-controls="circuit-detail-panel" tabindex="-1" style="left: 89.3%; top: 45.8%;">
+              <span class="circuit-node__num">03</span>
+              <span class="circuit-node__name">Aquisição</span>
+            </button>
+
+            <!-- Etapa 4 -->
+            <button type="button" class="circuit-node" data-step="3" id="circuit-node-3" role="tab" aria-selected="false" aria-controls="circuit-detail-panel" tabindex="-1" style="left: 72.5%; top: 73.1%;">
+              <span class="circuit-node__num">04</span>
+              <span class="circuit-node__name">CRM Vexor</span>
+            </button>
+
+            <!-- Etapa 5 -->
+            <button type="button" class="circuit-node" data-step="4" id="circuit-node-4" role="tab" aria-selected="false" aria-controls="circuit-detail-panel" tabindex="-1" style="left: 33.3%; top: 76%;">
+              <span class="circuit-node__num">05</span>
+              <span class="circuit-node__name">Atendimento Comercial</span>
+            </button>
+
+            <!-- Etapa 6 (Retorno) -->
+            <button type="button" class="circuit-node circuit-node--return" data-step="5" id="circuit-node-5" role="tab" aria-selected="false" aria-controls="circuit-detail-panel" tabindex="-1" style="left: 10.8%; top: 48.8%;">
+              <span class="circuit-node__num">06</span>
+              <span class="circuit-node__name">Inteligência</span>
+            </button>
+
+            <!-- Etapa 7 (Retorno) -->
+            <button type="button" class="circuit-node circuit-node--return" data-step="6" id="circuit-node-6" role="tab" aria-selected="false" aria-controls="circuit-detail-panel" tabindex="-1" style="left: 19.9%; top: 24.4%;">
+              <span class="circuit-node__num">07</span>
+              <span class="circuit-node__name">Otimização</span>
+            </button>
+
           </div>
         </div>
+
+        <!-- Área Integrada de Detalhamento da Etapa Selecionada -->
+        <div class="circuit-detail-panel reveal" id="circuit-detail-panel" role="tabpanel" aria-live="polite">
+          <div class="circuit-detail-card">
+            
+            <div class="circuit-detail-meta">
+              <span class="circuit-detail-badge" id="circuit-detail-badge">Etapa 01 de 07</span>
+              <span class="circuit-detail-tag" id="circuit-detail-tag">Etapa Ativa</span>
+            </div>
+
+            <h3 class="circuit-detail-title" id="circuit-detail-title">1. Mercado & Estratégia</h3>
+            
+            <p class="circuit-detail-desc" id="circuit-detail-desc">
+              Produto, concorrência, região, ticket, persona, objeções e processo comercial.
+            </p>
+
+            <div class="circuit-detail-controls">
+              <button type="button" class="circuit-ctrl-btn" id="circuit-btn-prev" aria-label="Etapa anterior">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                <span>Anterior</span>
+              </button>
+
+              <div class="circuit-step-pills" id="circuit-step-pills" role="presentation">
+                <!-- Pílulas de etapas 1 a 7 preenchidas dinamicamente -->
+              </div>
+
+              <button type="button" class="circuit-ctrl-btn" id="circuit-btn-next" aria-label="Próxima etapa">
+                <span>Próxima</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
 

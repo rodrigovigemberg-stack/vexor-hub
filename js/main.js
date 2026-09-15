@@ -227,6 +227,159 @@
   }
 
   /* ─────────────────────────────────────────
+     9. CIRCUITO INTERATIVO — MÉTODO VEXOR
+     ───────────────────────────────────────── */
+  function initMethodCircuit() {
+    const stage = document.querySelector('.vexor-circuit-stage');
+    if (!stage) return;
+
+    const stepsData = [
+      {
+        num: "01",
+        title: "1. Mercado & Estratégia",
+        desc: "Produto, concorrência, região, ticket, persona, objeções e processo comercial.",
+        tag: "Início do Ciclo"
+      },
+      {
+        num: "02",
+        title: "2. Oferta & Criativos",
+        desc: "Comunicação e criativos personalizados para atrair o perfil desejado.",
+        tag: "Comunicação"
+      },
+      {
+        num: "03",
+        title: "3. Aquisição",
+        desc: "Meta Ads, Google Ads e demais canais gerando oportunidades.",
+        tag: "Geração de Demanda"
+      },
+      {
+        num: "04",
+        title: "4. CRM Vexor",
+        desc: "Rastreio de origem: campanha, anúncio, público e entrada de cada oportunidade.",
+        tag: "Rastreabilidade"
+      },
+      {
+        num: "05",
+        title: "5. Atendimento Comercial",
+        desc: "Leitura do atendimento: resposta, conversa, follow-up, interesse, visita, proposta, perda ou venda.",
+        tag: "Operação Comercial"
+      },
+      {
+        num: "06",
+        title: "6. Inteligência",
+        desc: "Cruzamento entre origem do lead, qualidade, atendimento e resultado comercial.",
+        tag: "Retorno Inteligente"
+      },
+      {
+        num: "07",
+        title: "7. Otimização",
+        desc: "Os aprendizados retornam para estratégia, criativos, público, verba e processo comercial.",
+        tag: "Loop de Retorno"
+      }
+    ];
+
+    const nodes = document.querySelectorAll('.circuit-node');
+    const badge = document.getElementById('circuit-detail-badge');
+    const tag = document.getElementById('circuit-detail-tag');
+    const title = document.getElementById('circuit-detail-title');
+    const desc = document.getElementById('circuit-detail-desc');
+    const pillsContainer = document.getElementById('circuit-step-pills');
+    const btnPrev = document.getElementById('circuit-btn-prev');
+    const btnNext = document.getElementById('circuit-btn-next');
+
+    let currentStep = 0;
+
+    // Constrói pílulas numeradas para controle rápido / mobile
+    if (pillsContainer) {
+      pillsContainer.innerHTML = '';
+      stepsData.forEach((s, idx) => {
+        const pill = document.createElement('button');
+        pill.type = 'button';
+        pill.className = 'circuit-pill' + (idx === 0 ? ' circuit-pill--active' : '');
+        pill.setAttribute('role', 'tab');
+        pill.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
+        pill.setAttribute('aria-label', s.title);
+        pill.textContent = s.num;
+        pill.addEventListener('click', () => selectStep(idx));
+        pillsContainer.appendChild(pill);
+      });
+    }
+
+    function selectStep(index) {
+      if (index < 0) index = stepsData.length - 1;
+      if (index >= stepsData.length) index = 0;
+      currentStep = index;
+
+      const data = stepsData[index];
+
+      // Atualiza nós do circuito
+      nodes.forEach((n, idx) => {
+        const isActive = idx === index;
+        n.classList.toggle('circuit-node--active', isActive);
+        n.setAttribute('aria-selected', String(isActive));
+        n.setAttribute('tabindex', isActive ? '0' : '-1');
+      });
+
+      // Atualiza pílulas
+      if (pillsContainer) {
+        const pills = pillsContainer.querySelectorAll('.circuit-pill');
+        pills.forEach((p, idx) => {
+          const isActive = idx === index;
+          p.classList.toggle('circuit-pill--active', isActive);
+          p.setAttribute('aria-selected', String(isActive));
+        });
+      }
+
+      // Atualiza painel integrado
+      if (badge) badge.textContent = `Etapa ${data.num} de 07`;
+      if (tag) {
+        tag.textContent = data.tag;
+        tag.style.background = (index === 5 || index === 6) ? '#dcfce7' : '#f0fdf4';
+        tag.style.borderColor = (index === 5 || index === 6) ? '#16a34a' : 'rgba(22, 163, 74, 0.25)';
+      }
+      if (title) title.textContent = data.title;
+      if (desc) desc.textContent = data.desc;
+    }
+
+    // Cliques nos nós do circuito
+    nodes.forEach((node, idx) => {
+      node.addEventListener('click', () => selectStep(idx));
+
+      // Navegação por teclado acessível
+      node.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          selectStep(currentStep + 1);
+          nodes[currentStep].focus();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          selectStep(currentStep - 1);
+          nodes[currentStep].focus();
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          selectStep(0);
+          nodes[0].focus();
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          selectStep(stepsData.length - 1);
+          nodes[stepsData.length - 1].focus();
+        }
+      });
+    });
+
+    // Botões anterior / próximo
+    if (btnPrev) {
+      btnPrev.addEventListener('click', () => selectStep(currentStep - 1));
+    }
+    if (btnNext) {
+      btnNext.addEventListener('click', () => selectStep(currentStep + 1));
+    }
+
+    // Inicializa na etapa 0
+    selectStep(0);
+  }
+
+  /* ─────────────────────────────────────────
      INIT
      ───────────────────────────────────────── */
   function init() {
@@ -238,6 +391,7 @@
     initSmoothScroll();
     initBackToTop();
     initTechCarousel();
+    initMethodCircuit();
   }
 
   if (document.readyState === 'loading') {

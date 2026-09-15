@@ -887,37 +887,418 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ════════════════════════════════════════════════════
    05 — COMO TRABALHAMOS (⚪ BRANCO)
    ════════════════════════════════════════════════════ */
+/* ════════════════════════════════════════════════════
+   05 — MÉTODO VEXOR (⚪ BRANCO)
+   Circuito Fechado • 7 Etapas Integradas • Foco em Venda
+   ════════════════════════════════════════════════════ */
 .method-section {
-  padding: var(--section-space) 0;
+  padding: clamp(92px, 10vw, 136px) 0;
   background: #ffffff;
   border-bottom: 1px solid var(--border-light);
-}
-.method-section .section-title { color: var(--text-light-title); }
-.method-section .section-eyebrow { color: var(--brand-light-green); }
-.method-steps {
-  display: flex; align-items: flex-start;
-  gap: 0; margin-top: 56px;
   position: relative;
+  overflow: hidden;
 }
-.method-step {
-  flex: 1; text-align: center; padding: 0 12px;
-  display: flex; flex-direction: column; align-items: center; gap: 14px;
+
+.method-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto clamp(40px, 5.5vw, 64px);
 }
-.method-connector {
-  flex-shrink: 0; width: 60px; height: 2px;
-  background: var(--border-light);
-  margin-top: 26px;
+
+.method-eyebrow {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-light-green);
+  margin-bottom: 12px;
 }
-.step-number {
-  font-family: var(--font-heading); font-size: 14px; font-weight: 800;
-  color: var(--brand-light-green); letter-spacing: 0.05em;
-  background: var(--brand-light-soft); border: 1.5px solid var(--border-light-brand);
-  border-radius: 50%; width: 54px; height: 54px;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.08);
+
+.method-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  color: var(--text-light-title);
+  margin-bottom: 16px;
 }
-.step-title { font-family: var(--font-heading); font-size: 16.5px; font-weight: 700; color: var(--text-light-title); }
-.step-desc { font-size: 14px; color: var(--text-light-body); line-height: 1.65; max-width: 180px; }
+
+.method-keyphrase {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  font-weight: 500;
+  color: #3f3f46;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+
+/* Palco do Circuito Fechado */
+.vexor-circuit-stage {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 840 / 480;
+  margin: 0 auto clamp(32px, 4vw, 48px);
+}
+
+.circuit-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.circuit-track {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.circuit-track--forward {
+  stroke: #e2e8f0;
+  stroke-width: 1.75;
+}
+
+.circuit-track--return {
+  stroke: #16a34a;
+  stroke-width: 2.75;
+  stroke-dasharray: 8 5;
+  animation: returnPulse 2.5s linear infinite;
+}
+
+@keyframes returnPulse {
+  to {
+    stroke-dashoffset: -26;
+  }
+}
+
+/* Núcleo Central: VENDA */
+.circuit-core-hub {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  width: clamp(140px, 17vw, 178px);
+  height: clamp(140px, 17vw, 178px);
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 0 0 8px rgba(22, 163, 74, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  user-select: none;
+  pointer-events: none;
+}
+
+.circuit-core-tag {
+  font-family: var(--font-heading);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #16a34a;
+  margin-bottom: 2px;
+}
+
+.circuit-core-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #09090b;
+  line-height: 1;
+  margin: 2px 0;
+}
+
+.circuit-core-desc {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: #71717a;
+  font-weight: 500;
+}
+
+/* Camada dos Nós Interativos */
+.circuit-nodes-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+}
+
+.circuit-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 5px 13px 5px 7px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: var(--font-heading);
+  outline: none;
+}
+
+.circuit-node:hover {
+  border-color: #cbd5e1;
+  transform: translate(-50%, -50%) translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+.circuit-node:focus-visible {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+}
+
+.circuit-node__num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f4f4f5;
+  color: #52525b;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.circuit-node__name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #3f3f46;
+  transition: color 0.2s ease;
+}
+
+/* Nó Ativo */
+.circuit-node--active {
+  border-color: #16a34a;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(22, 163, 74, 0.2);
+  z-index: 6;
+}
+
+.circuit-node--active .circuit-node__num {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.circuit-node--active .circuit-node__name {
+  color: #09090b;
+  font-weight: 800;
+}
+
+/* Nós do Retorno (6 e 7) */
+.circuit-node--return {
+  border-color: #dcfce7;
+}
+
+.circuit-node--return .circuit-node__num {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+/* Área Integrada de Detalhamento da Etapa Selecionada */
+.circuit-detail-panel {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.circuit-detail-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: clamp(24px, 3.5vw, 36px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: border-color var(--tr-default);
+}
+
+.circuit-detail-card:hover {
+  border-color: #cbd5e1;
+}
+
+.circuit-detail-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.circuit-detail-badge {
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+.circuit-detail-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #16a34a;
+  background: #f0fdf4;
+  border: 1px solid rgba(22, 163, 74, 0.25);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+
+.circuit-detail-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+  font-weight: 800;
+  color: #09090b;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.circuit-detail-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  color: #52525b;
+  line-height: 1.65;
+  margin-bottom: 24px;
+  text-wrap: balance;
+  min-height: 48px;
+}
+
+/* Controles de Navegação Rápida */
+.circuit-detail-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.circuit-ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #52525b;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all var(--tr-fast);
+}
+
+.circuit-ctrl-btn:hover {
+  color: #09090b;
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.circuit-step-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.circuit-pill {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f4f4f5;
+  border: 1px solid transparent;
+  color: #71717a;
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--tr-fast);
+}
+
+.circuit-pill:hover {
+  color: #09090b;
+  border-color: #cbd5e1;
+}
+
+.circuit-pill--active {
+  background: #16a34a;
+  color: #ffffff;
+  border-color: #16a34a;
+}
+
+/* Versão Mobile para o Circuito */
+@media (max-width: 820px) {
+  .vexor-circuit-stage {
+    aspect-ratio: auto;
+    height: 360px;
+    max-width: 360px;
+    margin-bottom: 28px;
+  }
+  .circuit-node__name {
+    display: none;
+  }
+  .circuit-node {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    justify-content: center;
+  }
+  .circuit-node__num {
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+  }
+  .circuit-core-hub {
+    width: 125px;
+    height: 125px;
+  }
+  .circuit-core-title {
+    font-size: 20px;
+  }
+  .circuit-core-tag {
+    font-size: 8px;
+  }
+  .circuit-core-desc {
+    font-size: 9.5px;
+  }
+  .circuit-return-badge-group {
+    transform: translate(16px, 95px) scale(0.85);
+  }
+  .circuit-detail-card {
+    padding: 20px 16px;
+  }
+  .circuit-detail-desc {
+    min-height: auto;
+  }
+  .circuit-detail-controls {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circuit-track--return {
+    animation: none !important;
+  }
+}
 
 /* ════════════════════════════════════════════════════
    06 — JORNADA DO LEAD (⚫ PRETO)
