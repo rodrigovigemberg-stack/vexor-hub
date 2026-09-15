@@ -225,12 +225,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero-title {
   max-width: 920px;
   font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 3.7vw, 4.1rem);
+  font-size: clamp(2.55rem, 4.1vw, 4.15rem);
   font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.045em;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
   color: var(--text-light-title);
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   text-wrap: balance;
 }
 
@@ -243,16 +243,32 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .hero-subtitle {
-  font-size: clamp(0.98rem, 1.25vw, 1.15rem);
+  font-family: var(--font-body);
+  font-size: clamp(1.02rem, 1.25vw, 1.16rem);
   color: var(--text-light-body);
-  line-height: 1.65;
-  margin-bottom: 40px;
-  max-width: 580px;
+  line-height: 1.68;
+  margin-bottom: 38px;
+  max-width: 610px;
 }
 
 .hero-cta-group {
   display: flex;
   align-items: center;
+}
+
+.btn--hero {
+  padding: 15px 32px;
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.25);
+  transition: transform var(--tr-fast), background var(--tr-fast), box-shadow var(--tr-fast);
+}
+
+.btn--hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.35);
 }
 
 /* ════════════════════════════════════════
@@ -296,7 +312,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
   justify-content: center;
   z-index: 3;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Logo oficial branca da Vexor Hub (~75% de 190px = ~142px) */
@@ -312,7 +328,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   pointer-events: none;
 }
 
-/* Plataformas ao redor: Círculos brancos de ~58px com sombra cinza suave */
+/* Plataformas ao redor: Círculos brancos de ~58px com visual limpo e discreto */
 .platform-node {
   position: absolute;
   display: flex;
@@ -329,8 +345,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   height: 58px;
   border-radius: 50%;
   background: #ffffff;
-  border: 1px solid #f1f5f9;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -339,7 +355,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .platform-node:hover .platform-node__circle {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Nomes pequenos e retos abaixo de cada ícone */
@@ -1428,8 +1444,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .journey-flow { flex-direction: column; align-items: flex-start; }
   .journey-arrow { transform: rotate(90deg); margin: 4px 0 4px 23px; }
   .journey-step { flex-direction: row; text-align: left; max-width: 100%; }
-  .hero-cta-group { flex-direction: column; align-items: flex-start; }
+  .hero-cta-group { flex-direction: column; align-items: stretch; width: 100%; }
   .btn-primary { width: 100%; justify-content: center; }
+  .btn--hero { width: 100%; justify-content: center; text-align: center; white-space: normal; padding: 16px 20px; font-size: 15px; }
   .crm-board-cols { grid-template-columns: 1fr; }
   .solutions-tabs { flex-direction: column; align-items: stretch; }
   .sol-tab { text-align: center; }
