@@ -227,125 +227,35 @@
   }
 
   /* ─────────────────────────────────────────
-     9. CIRCUITO INTERATIVO — MÉTODO VEXOR
+     9. CIRCUITO VISUAL — MÉTODO VEXOR
      ───────────────────────────────────────── */
   function initMethodCircuit() {
     const stage = document.querySelector('.vexor-circuit-stage');
     if (!stage) return;
 
-    const stepsData = [
-      {
-        num: "01",
-        title: "1. Mercado & Estratégia",
-        desc: "Produto, concorrência, região, ticket, persona, objeções e processo comercial.",
-        tag: "Início do Ciclo"
-      },
-      {
-        num: "02",
-        title: "2. Oferta & Criativos",
-        desc: "Comunicação e criativos personalizados para atrair o perfil desejado.",
-        tag: "Comunicação"
-      },
-      {
-        num: "03",
-        title: "3. Aquisição",
-        desc: "Meta Ads, Google Ads e demais canais gerando oportunidades.",
-        tag: "Geração de Demanda"
-      },
-      {
-        num: "04",
-        title: "4. CRM Vexor",
-        desc: "Rastreio de origem: campanha, anúncio, público e entrada de cada oportunidade.",
-        tag: "Rastreabilidade"
-      },
-      {
-        num: "05",
-        title: "5. Atendimento Comercial",
-        desc: "Leitura do atendimento: resposta, conversa, follow-up, interesse, visita, proposta, perda ou venda.",
-        tag: "Operação Comercial"
-      },
-      {
-        num: "06",
-        title: "6. Inteligência",
-        desc: "Cruzamento entre origem do lead, qualidade, atendimento e resultado comercial.",
-        tag: "Retorno Inteligente"
-      },
-      {
-        num: "07",
-        title: "7. Otimização",
-        desc: "Os aprendizados retornam para estratégia, criativos, público, verba e processo comercial.",
-        tag: "Loop de Retorno"
-      }
-    ];
-
     const nodes = document.querySelectorAll('.circuit-node');
-    const badge = document.getElementById('circuit-detail-badge');
-    const tag = document.getElementById('circuit-detail-tag');
-    const title = document.getElementById('circuit-detail-title');
-    const desc = document.getElementById('circuit-detail-desc');
-    const pillsContainer = document.getElementById('circuit-step-pills');
-    const btnPrev = document.getElementById('circuit-btn-prev');
-    const btnNext = document.getElementById('circuit-btn-next');
+    if (!nodes.length) return;
 
     let currentStep = 0;
 
-    // Constrói pílulas numeradas para controle rápido / mobile
-    if (pillsContainer) {
-      pillsContainer.innerHTML = '';
-      stepsData.forEach((s, idx) => {
-        const pill = document.createElement('button');
-        pill.type = 'button';
-        pill.className = 'circuit-pill' + (idx === 0 ? ' circuit-pill--active' : '');
-        pill.setAttribute('role', 'tab');
-        pill.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
-        pill.setAttribute('aria-label', s.title);
-        pill.textContent = s.num;
-        pill.addEventListener('click', () => selectStep(idx));
-        pillsContainer.appendChild(pill);
-      });
-    }
-
     function selectStep(index) {
-      if (index < 0) index = stepsData.length - 1;
-      if (index >= stepsData.length) index = 0;
+      if (index < 0) index = nodes.length - 1;
+      if (index >= nodes.length) index = 0;
       currentStep = index;
 
-      const data = stepsData[index];
-
-      // Atualiza nós do circuito
+      // Atualiza estado visual ativo nos nós do circuito
       nodes.forEach((n, idx) => {
         const isActive = idx === index;
         n.classList.toggle('circuit-node--active', isActive);
         n.setAttribute('aria-selected', String(isActive));
         n.setAttribute('tabindex', isActive ? '0' : '-1');
       });
-
-      // Atualiza pílulas
-      if (pillsContainer) {
-        const pills = pillsContainer.querySelectorAll('.circuit-pill');
-        pills.forEach((p, idx) => {
-          const isActive = idx === index;
-          p.classList.toggle('circuit-pill--active', isActive);
-          p.setAttribute('aria-selected', String(isActive));
-        });
-      }
-
-      // Atualiza painel integrado
-      if (badge) badge.textContent = `Etapa ${data.num} de 07`;
-      if (tag) {
-        tag.textContent = data.tag;
-        tag.style.background = (index === 5 || index === 6) ? '#dcfce7' : '#f0fdf4';
-        tag.style.borderColor = (index === 5 || index === 6) ? '#16a34a' : 'rgba(22, 163, 74, 0.25)';
-      }
-      if (title) title.textContent = data.title;
-      if (desc) desc.textContent = data.desc;
     }
 
-    // Cliques nos nós do circuito
+    // Cliques e navegação por teclado nos nós do circuito
     nodes.forEach((node, idx) => {
       node.addEventListener('click', () => selectStep(idx));
 
-      // Navegação por teclado acessível
       node.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
           e.preventDefault();
@@ -361,22 +271,114 @@
           nodes[0].focus();
         } else if (e.key === 'End') {
           e.preventDefault();
-          selectStep(stepsData.length - 1);
-          nodes[stepsData.length - 1].focus();
+          selectStep(nodes.length - 1);
+          nodes[nodes.length - 1].focus();
         }
       });
     });
 
-    // Botões anterior / próximo
-    if (btnPrev) {
-      btnPrev.addEventListener('click', () => selectStep(currentStep - 1));
-    }
-    if (btnNext) {
-      btnNext.addEventListener('click', () => selectStep(currentStep + 1));
+    // Inicia com o primeiro nó ativo
+    selectStep(0);
+  }
+
+  /* ─────────────────────────────────────────
+     10. LIGHTBOX DE PRINTS REAIS
+     ───────────────────────────────────────── */
+  function initImageLightbox() {
+    const modal = document.getElementById('lightbox-modal');
+    const imgEl = document.getElementById('lightbox-img');
+    const captionEl = document.getElementById('lightbox-caption');
+    const closeBtn = document.getElementById('lightbox-close-btn');
+    const backdrop = document.getElementById('lightbox-backdrop');
+
+    if (!modal || !imgEl) return;
+
+    const triggers = document.querySelectorAll('.zoomable-print, [data-image]');
+
+    function openLightbox(src, caption) {
+      imgEl.src = src;
+      imgEl.alt = caption || 'Print real da operação comercial Vexor Hub';
+      if (captionEl) captionEl.textContent = caption || '';
+      modal.classList.add('is-active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
     }
 
-    // Inicializa na etapa 0
-    selectStep(0);
+    function closeLightbox() {
+      modal.classList.remove('is-active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      setTimeout(() => { imgEl.src = ''; }, 200);
+    }
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const src = trigger.getAttribute('data-image') || trigger.querySelector('img')?.src;
+        const caption = trigger.getAttribute('data-caption') || trigger.querySelector('img')?.alt;
+        if (src) openLightbox(src, caption);
+      });
+
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const src = trigger.getAttribute('data-image') || trigger.querySelector('img')?.src;
+          const caption = trigger.getAttribute('data-caption') || trigger.querySelector('img')?.alt;
+          if (src) openLightbox(src, caption);
+        }
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (backdrop) backdrop.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+        closeLightbox();
+      }
+    });
+  }
+
+  /* ─────────────────────────────────────────
+     11. MODAL DE VÍDEO DO CLIENTE
+     ───────────────────────────────────────── */
+  function initVideoModal() {
+    const trigger = document.getElementById('video-preview-btn');
+    const modal = document.getElementById('video-modal');
+    const closeBtn = document.getElementById('video-modal-close');
+    const backdrop = document.getElementById('video-modal-backdrop');
+
+    if (!trigger || !modal) return;
+
+    function openModal() {
+      modal.classList.add('is-active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    trigger.addEventListener('click', openModal);
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal();
+      }
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+        closeModal();
+      }
+    });
   }
 
   /* ─────────────────────────────────────────
@@ -392,6 +394,8 @@
     initBackToTop();
     initTechCarousel();
     initMethodCircuit();
+    initImageLightbox();
+    initVideoModal();
   }
 
   if (document.readyState === 'loading') {

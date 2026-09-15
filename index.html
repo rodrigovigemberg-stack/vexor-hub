@@ -36,8 +36,9 @@
       </a>
 
       <ul class="desktop-navigation" role="list">
-        <li><a href="#solucoes" class="nav-link">Soluções</a></li>
         <li><a href="#metodo" class="nav-link">Método Vexor</a></li>
+        <li><a href="#resultados" class="nav-link">Resultados</a></li>
+        <li><a href="#solucoes" class="nav-link">Soluções</a></li>
         <li><a href="#clientes" class="nav-link">Clientes</a></li>
         <li><a href="#sobre" class="nav-link">Sobre</a></li>
         <li><a href="#faq" class="nav-link">Dúvidas</a></li>
@@ -60,8 +61,9 @@
     <!-- Menu Mobile -->
     <div class="mobile-menu" id="mobile-menu" hidden>
       <ul role="list">
-        <li><a href="#solucoes" class="mobile-nav-link">Soluções</a></li>
         <li><a href="#metodo" class="mobile-nav-link">Método Vexor</a></li>
+        <li><a href="#resultados" class="mobile-nav-link">Resultados</a></li>
+        <li><a href="#solucoes" class="mobile-nav-link">Soluções</a></li>
         <li><a href="#clientes" class="mobile-nav-link">Clientes</a></li>
         <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
         <li><a href="#faq" class="mobile-nav-link">Dúvidas</a></li>
@@ -377,7 +379,7 @@
             </button>
 
             <!-- Etapa 7 (Retorno) -->
-            <button type="button" class="circuit-node circuit-node--return" data-step="6" id="circuit-node-6" role="tab" aria-selected="false" aria-controls="circuit-detail-panel" tabindex="-1" style="left: 19.9%; top: 24.4%;">
+            <button type="button" class="circuit-node circuit-node--return" data-step="6" id="circuit-node-6" role="tab" aria-selected="false" tabindex="-1" style="left: 19.9%; top: 24.4%;">
               <span class="circuit-node__num">07</span>
               <span class="circuit-node__name">Otimização</span>
             </button>
@@ -385,38 +387,214 @@
           </div>
         </div>
 
-        <!-- Área Integrada de Detalhamento da Etapa Selecionada -->
-        <div class="circuit-detail-panel reveal" id="circuit-detail-panel" role="tabpanel" aria-live="polite">
-          <div class="circuit-detail-card">
-            
-            <div class="circuit-detail-meta">
-              <span class="circuit-detail-badge" id="circuit-detail-badge">Etapa 01 de 07</span>
-              <span class="circuit-detail-tag" id="circuit-detail-tag">Etapa Ativa</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 04 — RESULTADOS + PROVA SOCIAL ═══════════════ -->
+    <section id="resultados" class="results-section" aria-label="Resultados e Prova Social">
+      <div class="container">
+
+        <!-- Cabeçalho da Seção -->
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Evidências Reais</span>
+          <h2 class="section-title">Resultados</h2>
+          <p class="section-subtitle">
+            Primeiro mostramos como trabalhamos. Em seguida, apresentamos evidências reais de quem confiou na Vexor para transformar marketing em vendas.
+          </p>
+        </div>
+
+        <!-- Bloco Principal de Destaque: Vídeo + Case de Alto Padrão -->
+        <div class="results-spotlight reveal">
+          <div class="results-spotlight-grid">
+
+            <!-- Coluna 1: Player de Vídeo com Depoimento do Cliente -->
+            <div class="results-video-card">
+              <div class="results-video-preview" id="video-preview-btn" role="button" tabindex="0" aria-label="Assistir depoimento do cliente sobre a parceria com a Vexor Hub">
+                <img src="assets/real-estate.jpg" alt="Operação comercial e atendimento imobiliário" class="results-video-thumb" loading="lazy">
+                <div class="results-video-overlay"></div>
+                <div class="results-video-badge">
+                  <span class="video-pulse-dot"></span>
+                  <span>Vídeo do Cliente • Caso Real</span>
+                </div>
+                <button type="button" class="results-play-btn" aria-label="Reproduzir vídeo" tabindex="-1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div class="results-video-meta">
+                  <p class="results-video-speaker">Diretoria Comercial & Parceiros</p>
+                  <span class="results-video-context">"A clareza de saber exatamente quais leads avançaram para visita e proposta mudou nossa rotina."</span>
+                </div>
+              </div>
             </div>
 
-            <h3 class="circuit-detail-title" id="circuit-detail-title">1. Mercado & Estratégia</h3>
-            
-            <p class="circuit-detail-desc" id="circuit-detail-desc">
-              Produto, concorrência, região, ticket, persona, objeções e processo comercial.
-            </p>
-
-            <div class="circuit-detail-controls">
-              <button type="button" class="circuit-ctrl-btn" id="circuit-btn-prev" aria-label="Etapa anterior">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-                <span>Anterior</span>
-              </button>
-
-              <div class="circuit-step-pills" id="circuit-step-pills" role="presentation">
-                <!-- Pílulas de etapas 1 a 7 preenchidas dinamicamente -->
+            <!-- Coluna 2: Case em Destaque — Construção Civil & Mercado Imobiliário -->
+            <div class="case-spotlight-card">
+              <div class="case-header">
+                <span class="case-badge">Case em Destaque • Mercado Imobiliário</span>
+                <h3 class="case-title">HAEDD Construtora & Padrone Imóveis</h3>
+                <p class="case-scope">Empreendimentos de Alto Padrão em Santa Catarina</p>
               </div>
 
-              <button type="button" class="circuit-ctrl-btn" id="circuit-btn-next" aria-label="Próxima etapa">
-                <span>Próxima</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-              </button>
+              <div class="case-steps">
+                <!-- Problema -->
+                <div class="case-step">
+                  <div class="case-step-label">
+                    <span class="case-step-tag case-step-tag--problem">Problema</span>
+                  </div>
+                  <p class="case-step-text">
+                    Tráfego anterior focado em volume bruto gerava centenas de leads sem capacidade de compra. Corretores perdiam tempo filtrando curiosos, a taxa de visitas no plantão era baixa e não havia rastreio de quais anúncios geravam fechamento de contratos.
+                  </p>
+                </div>
+
+                <!-- Atuação Vexor -->
+                <div class="case-step">
+                  <div class="case-step-label">
+                    <span class="case-step-tag case-step-tag--action">Atuação Vexor</span>
+                  </div>
+                  <p class="case-step-text">
+                    Reestruturação dos criativos e segmentação para o perfil de ticket alto. Integração de campanhas de Meta Ads e Google Ads direto ao CRM Vexor, com parâmetros de origem de cada oportunidade. Acompanhamento semanal da velocidade de resposta e das objeções enfrentadas pela equipe de vendas.
+                  </p>
+                </div>
+
+                <!-- Resultado -->
+                <div class="case-step">
+                  <div class="case-step-label">
+                    <span class="case-step-tag case-step-tag--result">Resultado</span>
+                  </div>
+                  <p class="case-step-text">
+                    Tempo médio de primeiro contato reduzido para menos de 4 minutos, aumento de 3.2x no agendamento de visitas presenciais qualificadas e controle total do ciclo comercial do primeiro clique até o contrato assinado.
+                  </p>
+                </div>
+              </div>
+
+              <div class="case-metrics-row">
+                <div class="case-metric">
+                  <span class="case-metric-value">+3.2x</span>
+                  <span class="case-metric-label">Aproveitamento de visitas</span>
+                </div>
+                <div class="case-metric">
+                  <span class="case-metric-value">&lt; 4 min</span>
+                  <span class="case-metric-label">Tempo de 1ª resposta</span>
+                </div>
+                <div class="case-metric">
+                  <span class="case-metric-value">100%</span>
+                  <span class="case-metric-label">Rastreio no CRM</span>
+                </div>
+              </div>
             </div>
 
           </div>
+        </div>
+
+        <!-- Divisória Discreta -->
+        <hr class="results-divider reveal">
+
+        <!-- Segundo Case Estruturado: Setor Automotivo -->
+        <div class="case-secondary-block reveal">
+          <div class="case-secondary-header">
+            <div>
+              <span class="case-badge">Case Comercial • Setor Automotivo</span>
+              <h3 class="case-title">Kinho Automóveis & Éden Car Multimarcas</h3>
+              <p class="case-scope">Veículos Seminovos e Selecionados • Giro Rápido de Estoque</p>
+            </div>
+            <div class="case-tag-pills">
+              <span class="case-tag-pill">Meta Ads</span>
+              <span class="case-tag-pill">WhatsApp Direto</span>
+              <span class="case-tag-pill">CRM Vexor</span>
+            </div>
+          </div>
+
+          <div class="case-steps-horizontal">
+            <!-- Problema -->
+            <div class="case-step-col">
+              <span class="case-step-tag case-step-tag--problem">Problema</span>
+              <p class="case-step-text">
+                Anúncios que traziam mensagens desordenadas de “está disponível?” no WhatsApp. Vendedores não sabiam qual veículo de estoque motivou o contato e não havia histórico comercial para follow-up ou reativação.
+              </p>
+            </div>
+
+            <!-- Atuação Vexor -->
+            <div class="case-step-col">
+              <span class="case-step-tag case-step-tag--action">Atuação Vexor</span>
+              <p class="case-step-text">
+                Campanhas com criativos dinâmicos segmentados por modelo e ticket de estoque. Entrada parametrizada no CRM informando o veículo de interesse na abertura da conversa e realocação contínua de verba para os modelos com maior demanda real de balcão.
+              </p>
+            </div>
+
+            <!-- Resultado -->
+            <div class="case-step-col">
+              <span class="case-step-tag case-step-tag--result">Resultado</span>
+              <p class="case-step-text">
+                Fim do desperdício em anúncios de baixa rotação, identificação imediata da intenção do comprador, crescimento sólido em agendamentos de test-drive e acompanhamento das vendas efetivamente fechadas no pátio.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divisória Discreta -->
+        <hr class="results-divider reveal">
+
+        <!-- Evidência 3: Prints Reais da Operação e CRM Vexor (com ampliação) -->
+        <div class="results-prints-block reveal">
+          <div class="results-prints-header">
+            <div>
+              <span class="case-badge">Prints Reais da Operação</span>
+              <h3 class="results-prints-title">Tecnologia e rotina comercial na prática</h3>
+            </div>
+            <p class="results-prints-desc">
+              Telas reais da plataforma de CRM e do planejamento operacional da Vexor. Clique em qualquer imagem para ampliar em alta resolução.
+            </p>
+          </div>
+
+          <div class="results-prints-grid">
+
+            <!-- Print 1: CRM Real -->
+            <figure class="print-card zoomable-print" data-image="assets/vexor-crm-real.png" data-caption="Interface real do CRM Vexor: acompanhamento em tempo real de etapas do funil, volume de oportunidades ativas e taxa de avanço comercial.">
+              <div class="print-card__img-wrap">
+                <img src="assets/vexor-crm-real.png" alt="Tela real do CRM Vexor — Funil de vendas e oportunidades comerciais" class="print-card__img" loading="lazy">
+                <div class="print-card__overlay">
+                  <span class="print-card__zoom-btn" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="14" y2="11"/></svg>
+                    <span>Clique para ampliar</span>
+                  </span>
+                </div>
+              </div>
+              <figcaption class="print-card__caption">
+                <span class="print-card__tag">CRM Vexor</span>
+                <span class="print-card__text">Pipeline e monitoramento contínuo de oportunidades</span>
+              </figcaption>
+            </figure>
+
+            <!-- Print 2: Planejamento Real -->
+            <figure class="print-card zoomable-print" data-image="assets/vexor-planner-real.png" data-caption="Interface real do Planejador Estratégico Vexor: gestão unificada de tarefas operacionais, cronograma de criativos e metas comerciais.">
+              <div class="print-card__img-wrap">
+                <img src="assets/vexor-planner-real.png" alt="Tela real do Planejamento Vexor — Gestão estratégica de ações operacionais" class="print-card__img" loading="lazy">
+                <div class="print-card__overlay">
+                  <span class="print-card__zoom-btn" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="14" y2="11"/></svg>
+                    <span>Clique para ampliar</span>
+                  </span>
+                </div>
+              </div>
+              <figcaption class="print-card__caption">
+                <span class="print-card__tag">Planejador Vexor</span>
+                <span class="print-card__text">Alinhamento semanal entre mídia, atendimento e metas</span>
+              </figcaption>
+            </figure>
+
+          </div>
+        </div>
+
+        <!-- CTA da Seção de Resultados -->
+        <div class="results-cta-bar reveal">
+          <div class="results-cta-content">
+            <h4 class="results-cta-title">Quer entender como essa metodologia se aplica ao seu negócio?</h4>
+            <p class="results-cta-desc">Converse com nossos especialistas e receba um diagnóstico da sua operação comercial.</p>
+          </div>
+          <a href="https://wa.me/554792224498?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Vexor%20Hub%20e%20quero%20um%20diagn%C3%B3stico%20da%20minha%20opera%C3%A7%C3%A3o."
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary" id="btn-results-cta">
+            Quero um diagnóstico da minha operação
+          </a>
         </div>
 
       </div>
@@ -988,6 +1166,50 @@
      aria-label="Falar com a Vexor Hub pelo WhatsApp">
     <svg viewBox="0 0 24 24" width="26" height="26" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
+
+  <!-- ═══════════════ LIGHTBOX MODAL (PRINTS) ═══════════════ -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Visualização ampliada do print real">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-wrapper">
+      <button type="button" class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Fechar visualização">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="lightbox-content">
+        <img src="" alt="" class="lightbox-img" id="lightbox-img">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ VIDEO MODAL ═══════════════ -->
+  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Vídeo do cliente Vexor Hub">
+    <div class="video-modal-backdrop" id="video-modal-backdrop"></div>
+    <div class="video-modal-wrapper">
+      <button type="button" class="video-modal-close" id="video-modal-close" aria-label="Fechar vídeo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="video-modal-container">
+        <div class="video-modal-header">
+          <span class="video-modal-tag">Depoimento em Vídeo • HAEDD Construtora & Padrone Imóveis</span>
+          <h4 class="video-modal-title">Parceria Comercial e Acompanhamento de Vendas</h4>
+        </div>
+        <div class="video-modal-body">
+          <div class="video-placeholder-frame">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <p class="video-placeholder-title">Depoimento em Vídeo Gravado</p>
+            <p class="video-placeholder-desc">
+              Espaço configurado e pronto para reprodução do vídeo gravado com o cliente.
+            </p>
+            <a href="https://wa.me/554792224498?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20os%20cases%20de%20sucesso%20da%20Vexor%20Hub."
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-primary" style="margin-top: 16px;">
+              Falar com a equipe no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
