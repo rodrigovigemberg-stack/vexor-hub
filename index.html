@@ -19,7 +19,7 @@
   <!-- Fontes: Manrope + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -28,11 +28,11 @@
   <!-- Barra de progresso de scroll -->
   <div id="scroll-progress" role="progressbar" aria-hidden="true"></div>
 
-  <!-- ═══════════════ HEADER ═══════════════ -->
+  <!-- ═══════════════ HEADER (FUNDO CLARO) ═══════════════ -->
   <header class="site-header" id="site-header">
     <nav class="main-navigation" aria-label="Navegação principal">
       <a href="#inicio" class="nav-logo" aria-label="Vexor Hub — Página inicial">
-        <img src="assets/logo-vexor-hub.png" alt="Vexor Hub" class="nav-logo-img">
+        <img src="assets/logo-dark.svg" alt="Vexor Hub" class="nav-logo-img">
       </a>
 
       <ul class="desktop-navigation" role="list">
@@ -80,15 +80,14 @@
 
   <main>
 
-    <!-- ═══════════════ DOBRA 1 — HERO ═══════════════ -->
-    <section id="inicio" class="hero-section">
+    <!-- ═══════════════ DOBRA 1 — HERO (⚪ BRANCO #FFFFFF) ═══════════════ -->
+    <section id="inicio" class="hero-section hero-section--white">
       <div class="hero-container container">
 
         <!-- Coluna esquerda: conteúdo -->
         <div class="hero-content">
           <h1 class="hero-title">
-            <span class="hero-line">Marketing que não</span>
-            <span class="hero-line hero-highlight">termina no lead.</span>
+            Marketing que não termina no lead.
           </h1>
 
           <p class="hero-subtitle">
@@ -104,28 +103,28 @@
           </div>
         </div>
 
-        <!-- Coluna direita: Diagrama de Integração de Plataformas -->
+        <!-- Coluna direita: Diagrama de Conexão de Plataformas -->
         <div class="hero-diagram-wrap" aria-label="Diagrama de integração de plataformas Vexor Hub">
-          <div class="hero-diagram" id="hero-diagram">
+          <div class="hero-diagram hero-diagram--clean" id="hero-diagram">
 
-            <!-- Linhas de conexão em cinza suave -->
+            <!-- Linhas de conexão cinza neutro -->
             <svg class="diagram-lines" viewBox="0 0 440 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <line x1="75" y1="70" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round" />
-              <line x1="365" y1="70" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round" />
-              <line x1="55" y1="215" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round" />
-              <line x1="385" y1="215" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round" />
-              <line x1="220" y1="355" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round" />
+              <line x1="75" y1="70" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.6" stroke-linecap="round" />
+              <line x1="365" y1="70" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.6" stroke-linecap="round" />
+              <line x1="55" y1="215" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.6" stroke-linecap="round" />
+              <line x1="385" y1="215" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.6" stroke-linecap="round" />
+              <line x1="220" y1="355" x2="220" y2="200" stroke="#e2e8f0" stroke-width="1.6" stroke-linecap="round" />
             </svg>
 
-            <!-- Centro: Círculo com Logo Oficial da Vexor Hub -->
+            <!-- Centro: Núcleo Vexor Hub -->
             <div class="diagram-center">
-              <img src="assets/logo-vexor-hub.png" alt="Vexor Hub" class="diagram-center__logo">
+              <img src="assets/logo-dark.svg" alt="Vexor Hub" class="diagram-center__logo">
             </div>
 
             <!-- Plataforma 1: Meta Ads -->
             <div class="platform-node platform-node--meta">
               <div class="platform-node__circle">
-                <svg viewBox="0 0 24 24" width="30" height="30" fill="#0081FB" aria-label="Meta Ads">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="#0081FB" aria-label="Meta Ads">
                   <path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/>
                 </svg>
               </div>
@@ -135,7 +134,7 @@
             <!-- Plataforma 2: Google Ads -->
             <div class="platform-node platform-node--google">
               <div class="platform-node__circle">
-                <svg viewBox="0 0 24 24" width="28" height="28" aria-label="Google Ads">
+                <svg viewBox="0 0 24 24" width="26" height="26" aria-label="Google Ads">
                   <path fill="#4285F4" d="M7.5137 4.8438L1.5645 15.1484A4.5 4.5 0 0 1 4 14.4297c2.5597-.0075 4.6248 2.1585 4.4941 4.7148l3.2168-5.5723-3.6094-6.25c-.4499-.7793-.6322-1.6394-.5878-2.4784z"/>
                   <path fill="#FBBC04" d="M23.4641 16.9287L15.4632 3.072C14.3586 1.1587 11.9121.5028 9.9988 1.6074S7.4295 5.1585 8.5341 7.0718l8.0009 13.8567c1.1046 1.9133 3.5511 2.5679 5.4644 1.4646 1.9134-1.1046 2.568-3.5511 1.4647-5.4644z"/>
                   <circle fill="#34A853" cx="4" cy="18.929" r="4"/>
@@ -147,7 +146,7 @@
             <!-- Plataforma 3: Facebook -->
             <div class="platform-node platform-node--facebook">
               <div class="platform-node__circle">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="#1877F2" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="#1877F2" aria-label="Facebook">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
               </div>
@@ -157,9 +156,9 @@
             <!-- Plataforma 4: Instagram -->
             <div class="platform-node platform-node--instagram">
               <div class="platform-node__circle">
-                <svg viewBox="0 0 24 24" width="28" height="28" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="26" height="26" aria-label="Instagram">
                   <defs>
-                    <linearGradient id="igGradientDiagram" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <linearGradient id="igGradientClean" x1="0%" y1="100%" x2="100%" y2="0%">
                       <stop offset="0%" stop-color="#FFDC80"/>
                       <stop offset="25%" stop-color="#F77737"/>
                       <stop offset="50%" stop-color="#F56040"/>
@@ -167,7 +166,7 @@
                       <stop offset="100%" stop-color="#C13584"/>
                     </linearGradient>
                   </defs>
-                  <path fill="url(#igGradientDiagram)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                  <path fill="url(#igGradientClean)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                 </svg>
               </div>
               <span class="platform-node__name">Instagram</span>
@@ -176,27 +175,27 @@
             <!-- Plataforma 5: WhatsApp -->
             <div class="platform-node platform-node--whatsapp">
               <div class="platform-node__circle">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="#25D366" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="#25D366" aria-label="WhatsApp">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                 </svg>
               </div>
               <span class="platform-node__name">WhatsApp</span>
             </div>
 
-          </div><!-- /hero-diagram -->
-        </div><!-- /hero-diagram-wrap -->
+          </div>
+        </div>
 
       </div>
     </section>
 
-    <!-- ═══════════════ DOBRA 2 — EMPRESAS QUE CONFIAM ═══════════════ -->
-    <section id="clientes" class="clients-strip" aria-label="Empresas que confiam no nosso trabalho">
+    <!-- ═══════════════ DOBRA 2 — EMPRESAS QUE CONFIAM (⚫ PRETO #000000) ═══════════════ -->
+    <section id="clientes" class="clients-strip clients-strip--dark" aria-label="Empresas que confiam no nosso trabalho">
       <p class="clients-strip__label">Empresas que confiam no nosso trabalho</p>
 
       <div class="marquee-viewport">
         <div class="marquee-track">
 
-          <!-- Grupo 1 (Principal) -->
+          <!-- Grupo 1 -->
           <div class="marquee-group">
             <div class="client-item">
               <img src="assets/client-haedd.png" alt="HAEDD Construtora e Incorporadora" class="client-logo" loading="eager" decoding="async">
@@ -224,7 +223,7 @@
             </div>
           </div>
 
-          <!-- Grupo 2 (Cópia para loop contínuo) -->
+          <!-- Grupo 2 (Loop contínuo) -->
           <div class="marquee-group" aria-hidden="true">
             <div class="client-item">
               <img src="assets/client-haedd.png" alt="" class="client-logo" loading="eager" decoding="async">
@@ -256,15 +255,14 @@
       </div>
     </section>
 
-    <!-- ═══════════════ DOBRA 3 — MÉTODO VEXOR ═══════════════ -->
-    <section id="metodo" class="method-section" aria-label="Método Vexor">
+    <!-- ═══════════════ DOBRA 3 — MÉTODO VEXOR (⚪ BRANCO #FFFFFF) ═══════════════ -->
+    <section id="metodo" class="method-section method-section--clean" aria-label="Método Vexor">
       <div class="container">
         
-        <!-- Cabeçalho da Seção -->
-        <div class="method-header reveal">
-          <span class="method-eyebrow">Como trabalhamos</span>
-          <h2 class="method-title">Método Vexor</h2>
-          <p class="method-keyphrase">
+        <!-- Cabeçalho Limpo -->
+        <div class="section-header reveal">
+          <h2 class="section-title">Método Vexor</h2>
+          <p class="section-subtitle">
             Não otimizamos campanhas apenas com base em cliques e leads. Otimizamos com base no que acontece depois deles.
           </p>
         </div>
@@ -272,81 +270,60 @@
         <!-- Palco do Circuito Fechado -->
         <div class="vexor-circuit-stage reveal">
 
-          <!-- Circuito Gráfico SVG Responsivo -->
-          <svg class="circuit-svg" viewBox="0 0 840 480" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Circuito SVG -->
+          <svg class="circuit-svg" viewBox="0 0 840 460" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs>
-              <!-- Seta de retorno verde -->
               <marker id="arrow-return" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a" />
               </marker>
-              <!-- Seta de avanço -->
-              <marker id="arrow-forward" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#cbd5e1" />
-              </marker>
             </defs>
 
-            <!-- Trilha Base do Circuito (1 até 6: fluxo comercial) -->
+            <!-- Trilha Base (1 a 6) -->
             <path d="M 335 65 A 330 160 0 0 1 750 220 A 330 160 0 0 1 91 234" class="circuit-track circuit-track--forward" />
 
-            <!-- Trilha de Retorno Inteligente em Verde Vexor (6 Inteligência ➔ 7 Otimização ➔ 1 Estratégia) -->
+            <!-- Retorno Inteligente Verde -->
             <path d="M 91 234 A 330 160 0 0 1 335 65" class="circuit-track circuit-track--return" marker-end="url(#arrow-return)" />
-
-            <!-- Indicador Editorial do Loop de Retorno no Circuito -->
-            <g class="circuit-return-badge-group" transform="translate(62, 132)">
-              <rect x="0" y="0" width="166" height="26" rx="13" fill="#f0fdf4" stroke="rgba(22, 163, 74, 0.35)" stroke-width="1.2" />
-              <text x="83" y="16.5" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#16a34a" text-anchor="middle" letter-spacing="0.08em">
-                ↺ LOOP DE RETORNO
-              </text>
-            </g>
           </svg>
 
           <!-- Núcleo Central: VENDA -->
-          <div class="circuit-core-hub" aria-label="Núcleo orientador: Venda">
-            <span class="circuit-core-tag">FOCO CENTRAL</span>
+          <div class="circuit-core-hub" aria-label="Foco Central: Venda">
             <span class="circuit-core-title">VENDA</span>
             <span class="circuit-core-desc">Resultado que orienta</span>
           </div>
 
-          <!-- Os 7 Nós do Circuito Dispostos ao Redor -->
+          <!-- Os 7 Nós do Circuito -->
           <div class="circuit-nodes-layer" role="tablist" aria-label="Etapas do Método Vexor">
             
-            <!-- Etapa 1 -->
             <button type="button" class="circuit-node circuit-node--active" data-step="0" id="circuit-node-0" role="tab" aria-selected="true" style="left: 40%; top: 13.5%;">
               <span class="circuit-node__num">01</span>
               <span class="circuit-node__name">Mercado & Estratégia</span>
             </button>
 
-            <!-- Etapa 2 -->
             <button type="button" class="circuit-node" data-step="1" id="circuit-node-1" role="tab" aria-selected="false" style="left: 75.2%; top: 20.2%;">
               <span class="circuit-node__num">02</span>
               <span class="circuit-node__name">Oferta & Criativos</span>
             </button>
 
-            <!-- Etapa 3 -->
             <button type="button" class="circuit-node" data-step="2" id="circuit-node-2" role="tab" aria-selected="false" style="left: 89.3%; top: 45.8%;">
               <span class="circuit-node__num">03</span>
               <span class="circuit-node__name">Aquisição</span>
             </button>
 
-            <!-- Etapa 4 -->
             <button type="button" class="circuit-node" data-step="3" id="circuit-node-3" role="tab" aria-selected="false" style="left: 72.5%; top: 73.1%;">
               <span class="circuit-node__num">04</span>
               <span class="circuit-node__name">CRM Vexor</span>
             </button>
 
-            <!-- Etapa 5 -->
             <button type="button" class="circuit-node" data-step="4" id="circuit-node-4" role="tab" aria-selected="false" style="left: 33.3%; top: 76%;">
               <span class="circuit-node__num">05</span>
               <span class="circuit-node__name">Atendimento Comercial</span>
             </button>
 
-            <!-- Etapa 6 (Retorno) -->
             <button type="button" class="circuit-node circuit-node--return" data-step="5" id="circuit-node-5" role="tab" aria-selected="false" style="left: 10.8%; top: 48.8%;">
               <span class="circuit-node__num">06</span>
               <span class="circuit-node__name">Inteligência</span>
             </button>
 
-            <!-- Etapa 7 (Retorno) -->
             <button type="button" class="circuit-node circuit-node--return" data-step="6" id="circuit-node-6" role="tab" aria-selected="false" style="left: 19.9%; top: 24.4%;">
               <span class="circuit-node__num">07</span>
               <span class="circuit-node__name">Otimização</span>
@@ -355,256 +332,156 @@
           </div>
         </div>
 
-        <!-- Grade Integrada das 7 Etapas (Acessíveis e Legíveis em Desktop e Mobile) -->
-        <div class="method-steps-grid reveal">
-          <div class="method-step-card method-step-card--active" data-step="0">
-            <div class="step-card-num">01</div>
-            <h3 class="step-card-title">Mercado & Estratégia</h3>
-            <p class="step-card-desc">Produto, concorrência, região, ticket, persona, objeções e processo comercial.</p>
+        <!-- Descrição Integrada da Etapa Selecionada (Sem grade de 7 cards grandes) -->
+        <div class="circuit-detail-display reveal" id="circuit-detail-display">
+          <div class="circuit-detail-header">
+            <span class="circuit-detail-num" id="circuit-detail-num">01</span>
+            <h3 class="circuit-detail-title" id="circuit-detail-title">Mercado & Estratégia</h3>
           </div>
-          <div class="method-step-card" data-step="1">
-            <div class="step-card-num">02</div>
-            <h3 class="step-card-title">Oferta & Criativos</h3>
-            <p class="step-card-desc">Comunicação e criativos personalizados para atrair o perfil desejado.</p>
-          </div>
-          <div class="method-step-card" data-step="2">
-            <div class="step-card-num">03</div>
-            <h3 class="step-card-title">Aquisição</h3>
-            <p class="step-card-desc">Meta Ads, Google Ads e demais canais gerando oportunidades.</p>
-          </div>
-          <div class="method-step-card" data-step="3">
-            <div class="step-card-num">04</div>
-            <h3 class="step-card-title">CRM Vexor</h3>
-            <p class="step-card-desc">Rastreio de origem: campanha, anúncio, público e entrada de cada oportunidade.</p>
-          </div>
-          <div class="method-step-card" data-step="4">
-            <div class="step-card-num">05</div>
-            <h3 class="step-card-title">Atendimento Comercial</h3>
-            <p class="step-card-desc">Leitura do atendimento: resposta, conversa, follow-up, interesse, visita, proposta, perda ou venda.</p>
-          </div>
-          <div class="method-step-card method-step-card--return" data-step="5">
-            <div class="step-card-num">06</div>
-            <h3 class="step-card-title">Inteligência</h3>
-            <p class="step-card-desc">Cruzamento entre origem do lead, qualidade, atendimento e resultado comercial.</p>
-          </div>
-          <div class="method-step-card method-step-card--return" data-step="6">
-            <div class="step-card-num">07</div>
-            <h3 class="step-card-title">Otimização</h3>
-            <p class="step-card-desc">Os aprendizados retornam para estratégia, criativos, público, verba e processo comercial.</p>
-          </div>
+          <p class="circuit-detail-desc" id="circuit-detail-desc">
+            Produto, concorrência, região, ticket, persona, objeções e processo comercial.
+          </p>
         </div>
 
       </div>
     </section>
 
-    <!-- ═══════════════ DOBRA 4 — RESULTADOS + PROVA SOCIAL ═══════════════ -->
-    <section id="resultados" class="results-section" aria-label="Resultados e Prova Social">
+    <!-- ═══════════════ DOBRA 4 — RESULTADOS NA PRÁTICA (⚫ PRETO #000000) ═══════════════ -->
+    <section id="resultados" class="results-section results-section--compact" aria-label="Resultados na prática">
       <div class="container">
 
-        <!-- Cabeçalho da Seção -->
+        <!-- Cabeçalho -->
         <div class="section-header reveal">
-          <span class="section-eyebrow">Evidências Reais</span>
           <h2 class="section-title">Resultados na prática.</h2>
           <p class="section-subtitle">
             Conheça os desafios de cada projeto, o trabalho realizado pela Vexor e os resultados acompanhados.
           </p>
         </div>
 
-        <!-- Bloco Principal de Destaque: Vídeo + Case de Alto Padrão -->
-        <div class="results-spotlight reveal">
-          <div class="results-spotlight-grid">
+        <!-- Seletor Discreto de Cases -->
+        <div class="case-selector-bar reveal" role="tablist" aria-label="Seleção de clientes e cases">
+          <button type="button" class="case-selector-btn case-selector-btn--active" id="case-btn-0" role="tab" aria-selected="true" aria-controls="case-panel-0" data-case="0">
+            HAEDD Construtora & Padrone Imóveis
+          </button>
+          <button type="button" class="case-selector-btn" id="case-btn-1" role="tab" aria-selected="false" aria-controls="case-panel-1" data-case="1">
+            Kinho Automóveis & Éden Car Multimarcas
+          </button>
+        </div>
 
-            <!-- Coluna 1: Vídeo do Cliente -->
-            <div class="results-video-card">
-              <div class="results-video-preview" id="video-preview-btn" role="button" tabindex="0" aria-label="Assistir depoimento do cliente sobre a parceria com a Vexor Hub">
-                <img src="assets/real-estate.jpg" alt="Operação comercial e atendimento imobiliário" class="results-video-thumb" loading="lazy">
-                <div class="results-video-overlay"></div>
-                <div class="results-video-badge">
-                  <span class="video-pulse-dot"></span>
-                  <span>Vídeo do Cliente • Caso Real</span>
-                </div>
-                <button type="button" class="results-play-btn" aria-label="Reproduzir vídeo" tabindex="-1">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                </button>
-                <div class="results-video-meta">
-                  <p class="results-video-speaker">Diretoria Comercial & Parceiros</p>
-                  <span class="results-video-context">"A clareza de saber exatamente quais leads avançaram para visita e proposta mudou nossa rotina."</span>
-                </div>
-              </div>
-            </div>
+        <!-- Painel de Cases (Um case por vez) -->
+        <div class="case-panels-wrap reveal">
 
-            <!-- Coluna 2: Case 1 — Construção Civil & Mercado Imobiliário -->
-            <div class="case-spotlight-card">
-              <div class="case-header">
-                <span class="case-badge">Case em Destaque • Mercado Imobiliário</span>
-                <h3 class="case-title">HAEDD Construtora & Padrone Imóveis</h3>
-                <p class="case-scope">Empreendimentos de Alto Padrão em Santa Catarina</p>
-              </div>
-
-              <div class="case-steps">
-                <!-- Problema -->
-                <div class="case-step">
-                  <div class="case-step-label">
-                    <span class="case-step-tag case-step-tag--problem">Problema</span>
+          <!-- Case 1: Imobiliário / Alto Padrão -->
+          <div class="case-panel case-panel--active" id="case-panel-0" role="tabpanel" aria-labelledby="case-btn-0">
+            <div class="case-content-grid">
+              
+              <div class="case-meta-side">
+                <span class="case-tag-clean">Mercado Imobiliário de Alto Padrão</span>
+                <h3 class="case-headline">HAEDD Construtora & Padrone Imóveis</h3>
+                <p class="case-location">Empreendimentos em Camboriú e Litoral Catarinense</p>
+                
+                <div class="case-metrics-stack">
+                  <div class="case-metric-box">
+                    <span class="case-metric-val">+3.2x</span>
+                    <span class="case-metric-lbl">Aproveitamento de visitas presenciais</span>
                   </div>
-                  <p class="case-step-text">
-                    Tráfego anterior focado em volume bruto gerava contatos desqualificados e sem capacidade de compra. Corretores perdiam tempo filtrando curiosos, a taxa de visitas no plantão era baixa e não havia rastreio de quais anúncios geravam fechamento de contratos.
+                  <div class="case-metric-box">
+                    <span class="case-metric-val">&lt; 4 min</span>
+                    <span class="case-metric-lbl">Tempo médio de 1º contato comercial</span>
+                  </div>
+                  <div class="case-metric-box">
+                    <span class="case-metric-val">100%</span>
+                    <span class="case-metric-lbl">Rastreio no CRM do clique ao contrato</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="case-steps-side">
+                <div class="case-flow-item">
+                  <h4 class="case-flow-title case-flow-title--problem">Problema</h4>
+                  <p class="case-flow-text">
+                    Tráfego anterior focado em volume bruto gerava centenas de contatos sem capacidade de compra. Corretores perdiam tempo filtrando curiosos, o agendamento no plantão era baixo e não havia rastreio de quais campanhas geravam fechamento de contratos.
                   </p>
                 </div>
 
-                <!-- Atuação Vexor -->
-                <div class="case-step">
-                  <div class="case-step-label">
-                    <span class="case-step-tag case-step-tag--action">Atuação Vexor</span>
-                  </div>
-                  <p class="case-step-text">
-                    Reestruturação completa de criativos e segmentação para o perfil de ticket alto. Integração de Meta Ads e Google Ads direto ao CRM Vexor com parâmetros de origem de cada oportunidade. Acompanhamento semanal da velocidade de resposta e das objeções da equipe comercial.
+                <div class="case-flow-item">
+                  <h4 class="case-flow-title case-flow-title--action">Atuação Vexor</h4>
+                  <p class="case-flow-text">
+                    Reestruturação de criativos e segmentação para o perfil de ticket alto. Integração de Meta Ads e Google Ads direto ao CRM Vexor com origem de cada oportunidade. Acompanhamento semanal da velocidade de atendimento e das objeções enfrentadas pelos corretores.
                   </p>
                 </div>
 
-                <!-- Resultado -->
-                <div class="case-step">
-                  <div class="case-step-label">
-                    <span class="case-step-tag case-step-tag--result">Resultado</span>
-                  </div>
-                  <p class="case-step-text">
-                    Tempo de primeiro contato reduzido para menos de 4 minutos, aumento de 3.2x no agendamento de visitas presenciais qualificadas e controle total do ciclo comercial do primeiro clique até a assinatura de contrato.
+                <div class="case-flow-item">
+                  <h4 class="case-flow-title case-flow-title--result">Resultado</h4>
+                  <p class="case-flow-text">
+                    Tempo médio de primeiro contato reduzido para menos de 4 minutos, aumento de 3.2x no aproveitamento de visitas presenciais qualificadas e controle total do ciclo comercial do primeiro clique até o contrato assinado.
                   </p>
                 </div>
               </div>
 
-              <div class="case-metrics-row">
-                <div class="case-metric">
-                  <span class="case-metric-value">+3.2x</span>
-                  <span class="case-metric-label">Aproveitamento de visitas</span>
-                </div>
-                <div class="case-metric">
-                  <span class="case-metric-value">&lt; 4 min</span>
-                  <span class="case-metric-label">Tempo de 1ª resposta</span>
-                </div>
-                <div class="case-metric">
-                  <span class="case-metric-value">100%</span>
-                  <span class="case-metric-label">Rastreio no CRM</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <hr class="results-divider reveal">
-
-        <!-- Case 2: Setor Automotivo -->
-        <div class="case-secondary-block reveal">
-          <div class="case-secondary-header">
-            <div>
-              <span class="case-badge">Case Comercial • Setor Automotivo</span>
-              <h3 class="case-title">Kinho Automóveis & Éden Car Multimarcas</h3>
-              <p class="case-scope">Veículos Seminovos e Selecionados • Giro Rápido de Estoque</p>
-            </div>
-            <div class="case-tag-pills">
-              <span class="case-tag-pill">Meta Ads</span>
-              <span class="case-tag-pill">WhatsApp Direto</span>
-              <span class="case-tag-pill">CRM Vexor</span>
             </div>
           </div>
 
-          <div class="case-steps-horizontal">
-            <div class="case-step-col">
-              <span class="case-step-tag case-step-tag--problem">Problema</span>
-              <p class="case-step-text">
-                Anúncios que traziam mensagens desordenadas de “está disponível?” no WhatsApp. Vendedores não sabiam qual veículo de estoque motivou o contato e não havia histórico comercial para follow-up ou reativação.
-              </p>
-            </div>
-
-            <div class="case-step-col">
-              <span class="case-step-tag case-step-tag--action">Atuação Vexor</span>
-              <p class="case-step-text">
-                Campanhas com criativos dinâmicos segmentados por modelo e ticket de estoque. Entrada parametrizada no CRM informando o veículo de interesse na abertura da conversa e realocação contínua de verba para os modelos com maior demanda real de balcão.
-              </p>
-            </div>
-
-            <div class="case-step-col">
-              <span class="case-step-tag case-step-tag--result">Resultado</span>
-              <p class="case-step-text">
-                Fim do desperdício em anúncios de baixa rotação, identificação imediata da intenção do comprador, crescimento sólido em agendamentos de test-drive e acompanhamento das vendas efetivamente fechadas no pátio.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <hr class="results-divider reveal">
-
-        <!-- Evidência 3: Prints Reais da Operação e CRM Vexor -->
-        <div class="results-prints-block reveal">
-          <div class="results-prints-header">
-            <div>
-              <span class="case-badge">Prints Reais da Operação</span>
-              <h3 class="results-prints-title">Tecnologia e rotina comercial na prática</h3>
-            </div>
-            <p class="results-prints-desc">
-              Telas reais da plataforma de CRM e do planejamento operacional da Vexor. Clique em qualquer imagem para ampliar em alta resolução.
-            </p>
-          </div>
-
-          <div class="results-prints-grid">
-            <!-- Print 1: CRM Real -->
-            <figure class="print-card zoomable-print" data-image="assets/vexor-crm-real.png" data-caption="Interface real do CRM Vexor: acompanhamento em tempo real de etapas do funil, volume de oportunidades ativas e taxa de avanço comercial.">
-              <div class="print-card__img-wrap">
-                <img src="assets/vexor-crm-real.png" alt="Tela real do CRM Vexor — Funil de vendas e oportunidades comerciais" class="print-card__img" loading="lazy">
-                <div class="print-card__overlay">
-                  <span class="print-card__zoom-btn" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="14" y2="11"/></svg>
-                    <span>Clique para ampliar</span>
-                  </span>
+          <!-- Case 2: Setor Automotivo -->
+          <div class="case-panel" id="case-panel-1" role="tabpanel" aria-labelledby="case-btn-1" hidden>
+            <div class="case-content-grid">
+              
+              <div class="case-meta-side">
+                <span class="case-tag-clean">Setor Automotivo Multimarcas</span>
+                <h3 class="case-headline">Kinho Automóveis & Éden Car Multimarcas</h3>
+                <p class="case-scope">Veículos Seminovos e Selecionados • Giro de Estoque</p>
+                
+                <div class="case-metrics-stack">
+                  <div class="case-metric-box">
+                    <span class="case-metric-val">+42%</span>
+                    <span class="case-metric-lbl">Aumento no agendamento de test-drives</span>
+                  </div>
+                  <div class="case-metric-box">
+                    <span class="case-metric-val">Direto</span>
+                    <span class="case-metric-lbl">Lead parametrizado pelo veículo no WhatsApp</span>
+                  </div>
+                  <div class="case-metric-box">
+                    <span class="case-metric-val">Total</span>
+                    <span class="case-metric-lbl">Histórico comercial para follow-up e pátio</span>
+                  </div>
                 </div>
               </div>
-              <figcaption class="print-card__caption">
-                <span class="print-card__tag">CRM Vexor</span>
-                <span class="print-card__text">Pipeline e monitoramento contínuo de oportunidades</span>
-              </figcaption>
-            </figure>
 
-            <!-- Print 2: Planejamento Real -->
-            <figure class="print-card zoomable-print" data-image="assets/vexor-planner-real.png" data-caption="Interface real do Planejador Estratégico Vexor: gestão unificada de tarefas operacionais, cronograma de criativos e metas comerciais.">
-              <div class="print-card__img-wrap">
-                <img src="assets/vexor-planner-real.png" alt="Tela real do Planejamento Vexor — Gestão estratégica de ações operacionais" class="print-card__img" loading="lazy">
-                <div class="print-card__overlay">
-                  <span class="print-card__zoom-btn" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="14" y2="11"/></svg>
-                    <span>Clique para ampliar</span>
-                  </span>
+              <div class="case-steps-side">
+                <div class="case-flow-item">
+                  <h4 class="case-flow-title case-flow-title--problem">Problema</h4>
+                  <p class="case-flow-text">
+                    Anúncios que traziam mensagens desordenadas de “está disponível?” no WhatsApp. Vendedores não sabiam qual veículo de estoque motivou o contato e não havia histórico comercial para follow-up ou reativação de clientes.
+                  </p>
+                </div>
+
+                <div class="case-flow-item">
+                  <h4 class="case-flow-title case-flow-title--action">Atuação Vexor</h4>
+                  <p class="case-flow-text">
+                    Campanhas com criativos dinâmicos segmentados por modelo e faixa de preço. Entrada parametrizada no CRM informando o veículo de interesse na abertura da conversa e realocação contínua de verba para os modelos com maior demanda real no pátio.
+                  </p>
+                </div>
+
+                <div class="case-flow-item">
+                  <h4 class="case-flow-title case-flow-title--result">Resultado</h4>
+                  <p class="case-flow-text">
+                    Fim do desperdício em anúncios de baixa rotação, identificação imediata da intenção do comprador, crescimento sólido em agendamentos de test-drive e acompanhamento das vendas efetivamente fechadas no balcão.
+                  </p>
                 </div>
               </div>
-              <figcaption class="print-card__caption">
-                <span class="print-card__tag">Planejador Vexor</span>
-                <span class="print-card__text">Alinhamento semanal entre mídia, atendimento e metas</span>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
 
-        <!-- CTA da Seção de Resultados -->
-        <div class="results-cta-bar reveal">
-          <div class="results-cta-content">
-            <h4 class="results-cta-title">Quer entender como essa metodologia se aplica ao seu negócio?</h4>
-            <p class="results-cta-desc">Converse com nossos especialistas e receba um diagnóstico da sua operação comercial.</p>
+            </div>
           </div>
-          <a href="https://wa.me/554792224498?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Vexor%20Hub%20e%20quero%20um%20diagn%C3%B3stico%20da%20minha%20opera%C3%A7%C3%A3o."
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn-primary" id="btn-results-cta">
-            Quero um diagnóstico da minha operação
-          </a>
+
         </div>
 
       </div>
     </section>
 
-    <!-- ═══════════════ DOBRA 5 — SOLUÇÕES ═══════════════ -->
-    <section id="solucoes" class="solutions-section">
+    <!-- ═══════════════ DOBRA 5 — SOLUÇÕES (⚪ BRANCO #FFFFFF) ═══════════════ -->
+    <section id="solucoes" class="solutions-section solutions-section--white">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">O que fazemos</span>
           <h2 class="section-title">
             Uma operação completa para atrair, posicionar e vender.
           </h2>
@@ -614,7 +491,7 @@
         </div>
 
         <!-- Tabs de Soluções (4 Grupos Oficiais) -->
-        <div class="solutions-tabs" role="tablist" aria-label="Grupos de soluções" id="solutions-tabs">
+        <div class="solutions-tabs solutions-tabs--clean" role="tablist" aria-label="Grupos de soluções" id="solutions-tabs">
           <button class="sol-tab sol-tab--active" role="tab" aria-selected="true" aria-controls="tab-aquisicao" id="btn-aquisicao" data-tab="aquisicao">
             Aquisição & Performance
           </button>
@@ -639,18 +516,12 @@
                 <p class="sol-panel-desc">Meta Ads, Google Ads, remarketing, campanhas de geração de demanda, formulários e landing pages.</p>
               </div>
               <div class="sol-panel-visual" aria-hidden="true">
-                <div class="platform-cards">
+                <div class="platform-cards platform-cards--clean">
                   <div class="platform-card">
-                    <div class="plat-logo-wrap">
-                      <svg width="28" height="28" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-                    </div>
-                    <span>Google Ads</span>
+                    <span class="plat-name">Google Ads</span>
                   </div>
                   <div class="platform-card">
-                    <div class="plat-logo-wrap">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </div>
-                    <span>Meta Ads</span>
+                    <span class="plat-name">Meta Ads</span>
                   </div>
                 </div>
               </div>
@@ -665,12 +536,12 @@
                 <p class="sol-panel-desc">Criativos de performance, vídeos, design, conteúdo, social media e comunicação.</p>
               </div>
               <div class="sol-panel-visual" aria-hidden="true">
-                <div class="positioning-cards">
-                  <div class="pos-card pos-card--content">
-                    <span class="pos-card-label">Vídeos & Design</span>
+                <div class="platform-cards platform-cards--clean">
+                  <div class="platform-card">
+                    <span class="plat-name">Vídeos & Design</span>
                   </div>
-                  <div class="pos-card pos-card--content">
-                    <span class="pos-card-label">Social Media</span>
+                  <div class="platform-card">
+                    <span class="plat-name">Social Media</span>
                   </div>
                 </div>
               </div>
@@ -685,12 +556,12 @@
                 <p class="sol-panel-desc">CRM Vexor, integrações, automações, acompanhamento de leads, análise de atendimento, relatórios e inteligência de dados.</p>
               </div>
               <div class="sol-panel-visual" aria-hidden="true">
-                <div class="crm-mini-preview">
-                  <div class="crm-col">
-                    <div class="crm-col-label">Entrada Parametrizada</div>
+                <div class="platform-cards platform-cards--clean">
+                  <div class="platform-card">
+                    <span class="plat-name">Entrada Parametrizada</span>
                   </div>
-                  <div class="crm-col">
-                    <div class="crm-col-label">Avanço Comercial</div>
+                  <div class="platform-card">
+                    <span class="plat-name">Avanço Comercial</span>
                   </div>
                 </div>
               </div>
@@ -705,12 +576,12 @@
                 <p class="sol-panel-desc">Sites, landing pages, Google Business Profile, SEO local e estrutura digital.</p>
               </div>
               <div class="sol-panel-visual" aria-hidden="true">
-                <div class="positioning-cards">
-                  <div class="pos-card pos-card--content">
-                    <span class="pos-card-label">Sites & LPs</span>
+                <div class="platform-cards platform-cards--clean">
+                  <div class="platform-card">
+                    <span class="plat-name">Sites & LPs</span>
                   </div>
-                  <div class="pos-card pos-card--content">
-                    <span class="pos-card-label">Google Business & SEO</span>
+                  <div class="platform-card">
+                    <span class="plat-name">Google Business & SEO</span>
                   </div>
                 </div>
               </div>
@@ -721,14 +592,13 @@
       </div>
     </section>
 
-    <!-- ═══════════════ DOBRA 6 — PARCERIA COM O COMERCIAL ═══════════════ -->
+    <!-- ═══════════════ DOBRA 6 — MAIS DO QUE FORNECEDOR (⚫ PRETO #000000) ═══════════════ -->
     <section id="comercial" class="commercial-section">
       <div class="container">
         
         <div class="commercial-grid">
-          <!-- Conteúdo editorial -->
+          <!-- Conteúdo -->
           <div class="commercial-content reveal">
-            <span class="section-eyebrow">Não basta gerar leads. É preciso transformar oportunidades em vendas.</span>
             <h2 class="commercial-title">Mais do que fornecedor.</h2>
             <p class="commercial-lead">
               Nosso trabalho não termina quando o marketing entrega uma oportunidade. Acompanhamos o que acontece depois para tomar decisões melhores antes da próxima.
@@ -737,71 +607,62 @@
               Trabalhamos próximos da sua equipe para entender o atendimento, acompanhar os avanços e usar esses aprendizados nas próximas campanhas.
             </p>
 
-            <!-- Cards de Acompanhamento Integrado -->
-            <div class="commercial-pillars">
-              <div class="commercial-pillar-item">
-                <div class="pillar-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <div>
-                  <h4 class="pillar-title">Origem dos contatos</h4>
-                  <p class="pillar-desc">Identificamos quais campanhas e anúncios geram oportunidades.</p>
-                </div>
-              </div>
-
-              <div class="commercial-pillar-item">
-                <div class="pillar-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
-                </div>
-                <div>
-                  <h4 class="pillar-title">Qualidade das oportunidades</h4>
-                  <p class="pillar-desc">Analisamos o perfil e o interesse dos contatos recebidos.</p>
-                </div>
-              </div>
-
-              <div class="commercial-pillar-item">
-                <div class="pillar-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                </div>
-                <div>
-                  <h4 class="pillar-title">Atendimento comercial</h4>
-                  <p class="pillar-desc">Acompanhamos respostas, conversas, follow-ups e avanços na negociação.</p>
-                </div>
-              </div>
-
-              <div class="commercial-pillar-item">
-                <div class="pillar-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
-                </div>
-                <div>
-                  <h4 class="pillar-title">Resultados e aprendizados</h4>
-                  <p class="pillar-desc">Usamos os dados de visitas, propostas, perdas e vendas para orientar as próximas decisões.</p>
-                </div>
-              </div>
+            <div class="commercial-concept-box">
+              <p class="commercial-concept-text">
+                Não basta gerar leads. É preciso transformar oportunidades em vendas.
+              </p>
             </div>
 
-            <div class="commercial-cta">
-              <a href="https://wa.me/554792224498?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Vexor%20Hub%20e%20gostaria%20de%20conversar%20sobre%20a%20minha%20opera%C3%A7%C3%A3o."
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn btn-primary">
-                Falar com a Vexor
-              </a>
+            <!-- Os 4 Pilares -->
+            <div class="commercial-pillars">
+              <div class="commercial-pillar-item">
+                <h4 class="pillar-title">Origem dos contatos</h4>
+                <p class="pillar-desc">Identificamos quais campanhas e anúncios geram oportunidades.</p>
+              </div>
+
+              <div class="commercial-pillar-item">
+                <h4 class="pillar-title">Qualidade das oportunidades</h4>
+                <p class="pillar-desc">Analisamos o perfil e o interesse dos contatos recebidos.</p>
+              </div>
+
+              <div class="commercial-pillar-item">
+                <h4 class="pillar-title">Atendimento comercial</h4>
+                <p class="pillar-desc">Acompanhamos respostas, conversas, follow-ups e avanços na negociação.</p>
+              </div>
+
+              <div class="commercial-pillar-item">
+                <h4 class="pillar-title">Resultados e aprendizados</h4>
+                <p class="pillar-desc">Usamos os dados de visitas, propostas, perdas e vendas para orientar as próximas decisões.</p>
+              </div>
             </div>
           </div>
 
-          <!-- Coluna visual: tela real do CRM integrada -->
-          <div class="commercial-visual reveal" aria-hidden="true">
-            <div class="commercial-visual-card">
-              <div class="commercial-visual-header">
-                <span class="commercial-dot"></span>
-                <span class="commercial-label">CRM Vexor • Monitoramento de Atendimento</span>
-              </div>
-              <div class="commercial-visual-img-wrap">
-                <img src="assets/vexor-crm-dashboard.png" alt="Painel do CRM Vexor" class="commercial-visual-img" loading="lazy">
-              </div>
-              <div class="commercial-visual-footer">
-                <p>Dados de origem integrados à rotina de fechamento de vendas.</p>
-              </div>
+          <!-- Coluna Visual: Telas e Prints de CRM da Rotina Operacional -->
+          <div class="commercial-visual reveal">
+            <div class="commercial-gallery">
+              <figure class="print-card zoomable-print" data-image="assets/vexor-crm-real.png" data-caption="Interface real do CRM Vexor: acompanhamento em tempo real de etapas do funil e avanço comercial.">
+                <div class="print-card__img-wrap">
+                  <img src="assets/vexor-crm-real.png" alt="Tela real do CRM Vexor — Funil de vendas" class="print-card__img" loading="lazy">
+                  <div class="print-card__overlay">
+                    <span class="print-card__zoom-btn">Ampliar tela</span>
+                  </div>
+                </div>
+                <figcaption class="print-card__caption">
+                  <span class="print-card__text">CRM Vexor: pipeline de oportunidades</span>
+                </figcaption>
+              </figure>
+
+              <figure class="print-card zoomable-print" data-image="assets/vexor-planner-real.png" data-caption="Planejador Operacional Vexor: rotina e acompanhamento comercial semanal.">
+                <div class="print-card__img-wrap">
+                  <img src="assets/vexor-planner-real.png" alt="Planejador Estratégico Vexor" class="print-card__img" loading="lazy">
+                  <div class="print-card__overlay">
+                    <span class="print-card__zoom-btn">Ampliar tela</span>
+                  </div>
+                </div>
+                <figcaption class="print-card__caption">
+                  <span class="print-card__text">Planejamento semanal integrado</span>
+                </figcaption>
+              </figure>
             </div>
           </div>
         </div>
@@ -809,12 +670,13 @@
       </div>
     </section>
 
-    <!-- ═══════════════ DOBRA 7 — QUEM SOMOS ═══════════════ -->
-    <section id="sobre" class="about-section">
+    <!-- ═══════════════ DOBRA 7 — QUEM SOMOS (⚪ BRANCO #FFFFFF) ═══════════════ -->
+    <section id="sobre" class="about-section about-section--white">
       <div class="container">
         <div class="about-grid">
-          <!-- Fotos em destaque de Rodrigo e Carol (dimensões contidas e equilibradas) -->
-          <div class="about-founders-showcase reveal" aria-label="Rodrigo e Carol — Vexor Hub">
+          
+          <!-- Fotos com Proporções Rigorosas (sem fotos gigantes) -->
+          <div class="about-founders-showcase reveal" aria-label="Rodrigo e Carolina — Vexor Hub">
             <div class="founder-card">
               <div class="founder-img-wrap">
                 <img src="assets/rodrigo.png" alt="Rodrigo Vigenberg — Vexor Hub" loading="lazy">
@@ -837,7 +699,6 @@
           </div>
 
           <div class="about-content reveal">
-            <span class="section-eyebrow section-eyebrow--light">Quem somos</span>
             <h2 class="about-title">
               Pessoas por trás dos números.
             </h2>
@@ -845,16 +706,17 @@
               Somos a Vexor Hub. Conectamos marketing, atendimento e dados para ajudar empresas a vender mais. Trabalhamos próximos de cada cliente, acompanhando as oportunidades e usando os resultados para orientar as próximas decisões.
             </p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════ DOBRA 8 — ESCRITÓRIO + MAPA ═══════════════ -->
+    <!-- ═══════════════ DOBRA 8 — ESCRITÓRIO E LOCALIZAÇÃO (⚫ PRETO #000000) ═══════════════ -->
     <section id="escritorio" class="office-section">
       <div class="container">
         <div class="office-grid">
+          
           <div class="office-info reveal">
-            <span class="section-eyebrow">Localização & Estrutura</span>
             <h2 class="office-title">Onde estratégia vira operação.</h2>
             <p class="office-desc">
               Em Camboriú, Santa Catarina, conectamos estratégia, marketing e acompanhamento comercial para apoiar o crescimento dos nossos clientes.
@@ -881,17 +743,9 @@
                 </div>
               </div>
             </div>
-
-            <div class="office-cta">
-              <a href="https://wa.me/554792224498?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20Vexor%20Hub."
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn btn-primary">
-                Falar com a Vexor
-              </a>
-            </div>
           </div>
 
-          <!-- Mapa Responsivo e Estilizado de Camboriú / SC -->
+          <!-- Mapa Google Maps -->
           <div class="office-map-wrap reveal">
             <iframe
               title="Localização da Vexor Hub em Camboriú, Santa Catarina"
@@ -901,19 +755,21 @@
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════ DOBRA 9 — FAQ + CTA FINAL ═══════════════ -->
-    <section id="faq" class="faq-section">
+    <!-- ═══════════════ DOBRA 9 — FAQ E CTA FINAL (⚪ BRANCO #FFFFFF UNIFICADO) ═══════════════ -->
+    <section id="faq" class="faq-cta-unified-section">
       <div class="container">
+        
+        <!-- Bloco do FAQ -->
         <div class="section-header reveal">
-          <span class="section-eyebrow">Dúvidas frequentes</span>
           <h2 class="section-title">Tire suas dúvidas antes de começar.</h2>
         </div>
 
-        <div class="faq-list" id="faq-list">
+        <div class="faq-list faq-list--clean" id="faq-list">
 
           <!-- Pergunta 1 -->
           <div class="faq-item reveal">
@@ -993,17 +849,13 @@
           </div>
 
         </div>
-      </div>
-    </section>
 
-    <!-- ═══════════════ CTA FINAL ═══════════════ -->
-    <section id="contato" class="final-cta-section">
-      <div class="container">
-        <div class="final-cta-box reveal">
-          <h2 class="final-cta-title">
+        <!-- Bloco de CTA Final Integrado (Direto no fundo branco, SEM caixa preta flutuante) -->
+        <div id="contato" class="unified-cta-block reveal">
+          <h2 class="unified-cta-title">
             Seu marketing gera leads. Mas você sabe quais realmente viram vendas?
           </h2>
-          <p class="final-cta-subtitle">
+          <p class="unified-cta-subtitle">
             Vamos analisar sua operação e identificar onde estão as oportunidades de crescimento.
           </p>
           <a href="https://wa.me/554792224498?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Vexor%20Hub%20e%20gostaria%20de%20conhecer%20melhor%20as%20solu%C3%A7%C3%B5es%20para%20o%20meu%20neg%C3%B3cio."
@@ -1012,12 +864,13 @@
             Quero falar com a Vexor
           </a>
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <!-- ═══════════════ DOBRA 10 — RODAPÉ (⚫ PRETO #000000) ═══════════════ -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
@@ -1046,7 +899,7 @@
     </div>
   </footer>
 
-  <!-- Modal Lightbox para Prints de CRM e Planejador -->
+  <!-- Modal Lightbox para Telas de CRM -->
   <div class="print-modal" id="print-modal" role="dialog" aria-modal="true" aria-hidden="true" hidden>
     <div class="print-modal__backdrop" id="print-modal-backdrop"></div>
     <div class="print-modal__content">
@@ -1061,7 +914,8 @@
      target="_blank" rel="noopener noreferrer"
      class="floating-whatsapp" id="floating-whatsapp"
      aria-label="Falar com a Vexor Hub pelo WhatsApp">
-    <svg viewBox="0 0 24 24" width="26" height="26" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
   </a>
 
   <script src="js/main.js"></script>

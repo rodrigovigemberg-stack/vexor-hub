@@ -155,23 +155,62 @@
      ───────────────────────────────────────── */
   function initCircuitInteractive() {
     const nodes = document.querySelectorAll('.circuit-node');
-    const cards = document.querySelectorAll('.method-step-card');
-    if (!nodes.length || !cards.length) return;
+    const numEl = document.getElementById('circuit-detail-num');
+    const titleEl = document.getElementById('circuit-detail-title');
+    const descEl = document.getElementById('circuit-detail-desc');
+    if (!nodes.length) return;
+
+    const methodSteps = [
+      {
+        num: '01',
+        title: 'Mercado & Estratégia',
+        desc: 'Produto, concorrência, região, ticket, persona, objeções e processo comercial.'
+      },
+      {
+        num: '02',
+        title: 'Oferta & Criativos',
+        desc: 'Comunicação e criativos personalizados para atrair o perfil desejado.'
+      },
+      {
+        num: '03',
+        title: 'Aquisição',
+        desc: 'Meta Ads, Google Ads e demais canais gerando oportunidades.'
+      },
+      {
+        num: '04',
+        title: 'CRM Vexor',
+        desc: 'Rastreio de origem: campanha, anúncio, público e entrada de cada oportunidade.'
+      },
+      {
+        num: '05',
+        title: 'Atendimento Comercial',
+        desc: 'Tempo de resposta, abordagem, condução de conversa e avanços na negociação.'
+      },
+      {
+        num: '06',
+        title: 'Inteligência',
+        desc: 'Quais públicos, anúncios e canais geram visitas, propostas e vendas reais.'
+      },
+      {
+        num: '07',
+        title: 'Otimização',
+        desc: 'Ajuste contínuo de estratégia, criativos e verba com base nos dados comerciais.'
+      }
+    ];
 
     function selectStep(stepIndex) {
+      if (stepIndex < 0 || stepIndex >= methodSteps.length) return;
+
       nodes.forEach(n => {
         const isSelected = n.getAttribute('data-step') === String(stepIndex);
         n.classList.toggle('circuit-node--active', isSelected);
         n.setAttribute('aria-selected', String(isSelected));
       });
 
-      cards.forEach(c => {
-        const isSelected = c.getAttribute('data-step') === String(stepIndex);
-        c.classList.toggle('method-step-card--active', isSelected);
-        if (isSelected) {
-          c.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-        }
-      });
+      const data = methodSteps[stepIndex];
+      if (numEl) numEl.textContent = data.num;
+      if (titleEl) titleEl.textContent = data.title;
+      if (descEl) descEl.textContent = data.desc;
     }
 
     nodes.forEach(node => {
@@ -180,12 +219,32 @@
         if (step !== null) selectStep(Number(step));
       });
     });
+  }
 
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        const step = card.getAttribute('data-step');
-        if (step !== null) selectStep(Number(step));
+  /* ─────────────────────────────────────────
+     5.1 SELETOR DE CASES (RESULTADOS NA PRÁTICA)
+     ───────────────────────────────────────── */
+  function initCaseSelector() {
+    const btns = document.querySelectorAll('.case-selector-btn');
+    const panels = document.querySelectorAll('.case-panel');
+    if (!btns.length || !panels.length) return;
+
+    function selectCase(idx) {
+      btns.forEach((b, i) => {
+        const active = i === idx;
+        b.classList.toggle('case-selector-btn--active', active);
+        b.setAttribute('aria-selected', String(active));
       });
+
+      panels.forEach((p, i) => {
+        const active = i === idx;
+        p.classList.toggle('case-panel--active', active);
+        p.hidden = !active;
+      });
+    }
+
+    btns.forEach((btn, idx) => {
+      btn.addEventListener('click', () => selectCase(idx));
     });
   }
 
@@ -299,6 +358,7 @@
     initReveal();
     initSolutionsTabs();
     initCircuitInteractive();
+    initCaseSelector();
     initPrintModal();
     initFaq();
     initSmoothScroll();
